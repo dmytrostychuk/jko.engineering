@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: gray;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  transition: 0.6s ease-in-out;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  text-decoration: none;
+}
+
+.main {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-container-width;
+  padding: 0 20px;
+
+  @include mq($from: phablet) {
+    padding: 0 20px;
+  }
+
+  @include mq($from: tablet) {
+    padding: 0 30px;
+  }
+
+  @include mq($from: tablet-wide) {
+    padding: 0 40px;
+  }
+
+  @include mq($from: desktop) {
+    padding: 0 50px;
+  }
+}
+
+.section {
+  margin-bottom: $section-margin-bottom;
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.footer {
+  margin-top: auto;
+}

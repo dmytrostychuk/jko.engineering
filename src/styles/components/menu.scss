@@ -1,0 +1,61 @@
+.menu {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-300%);
+  background-color: #626364;
+  transition: transform 0.6s ease-in-out;
+
+  @include mq($from: tablet) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    background-color: inherit;
+    transform: translateY(0);
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0px;
+      right: -100%;
+      transform: skewX(-35deg);
+      bottom: 0;
+      height: 100%;
+      /* width: 70%; */
+      background: linear-gradient(-90deg, #8b0304 13%, #818285 83%);
+      z-index: -1;
+    }
+  }
+
+  @include mq($from: desktop) {
+    padding-right: 40px;
+  }
+}
+
+.menu--active {
+  position: absolute;
+  transform: translateY(0);
+  transition: 0.6s ease-out;
+
+  @include mq($from: tablet) {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.menu__wrapper {
+  position: relative;
+}
+
+.navbar__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  @include mq($from: tablet) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+}

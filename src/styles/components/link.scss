@@ -1,0 +1,16 @@
+.navbar__link {
+  display: block;
+  padding: 16px 20px;
+  color: #d3d3d3;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: #e4e2e2;
+  }
+
+  @include mq($from: tablet) {
+    &:hover {
+      color: #e4e2e2;
+    }
+  }
+}

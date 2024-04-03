@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main page</title>
+  <link rel="stylesheet" href="styles/style-min.css" />
+</head>
+
+<body>
+  <header class="header">
+
+
+    <div class="header__wrapper">
+
+      <div class="header__inner ">
+        <div class=" header__container ">
+          <div class="header__logo">
+            <h1 class="header__title"><a href="#"><img src="img/logo_header.png" alt="logo" width="200"></a></h1>
+          </div>
+          <div class="header__lang desktop-none">
+            <button class="header__btn" data-btn="ua">UA</button>
+            <button class="header__btn" data-btn="en">EN</button>
+          </div>
+          <div class="header__menu-button">
+            <button class="navbar__button" type="button">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__menu menu">
+
+        <div class="menu__wrapper">
+          <nav class="navbar">
+            <div class="header__lang mobile-none">
+              <button class="header__btn" data-btn="ua">UA</button>
+              <button class="header__btn" data-btn="en">EN</button>
+            </div>
+            <ul class="navbar__list">
+              <li class="navbar__item"><a class="navbar__link" href="#">jko.engineering</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">піу пау</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="top-content rellax" data-rellax-speed="-10">
+      <div class="top-content__bg ">
+      </div>
+      <div class="top-content__text">
+        <h1 class=" top-content__title ">Продуктова сушильна камера</h1>
+      </div>
+    </section>
+  </main>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+  </script>
+  <script src="js/index.js"></script>
+  <script src="js/lang.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.header__btn {
+  padding: 5px 10px;
+  margin-bottom: 7px;
+  background-color: inherit;
+  color: #ffffff;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+
+  @include mq($from: phablet) {
+    margin-bottom: 0px;
+    margin-left: 6px;
+  }
+}
+
+.header__btn_active {
+  background-color: #8882825d;
+  color: #ff1900;
+  border-radius: 3px;
+}

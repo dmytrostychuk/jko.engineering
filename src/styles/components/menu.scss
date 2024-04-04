@@ -78,24 +78,6 @@
     width: auto;
     align-items: center;
     transform: translateY(0);
-    margin-top: 100px;
-
-    &::after {
-      content: ' ';
-      position: absolute;
-      left: 0px;
-      right: 0;
-      transform: skewX(-35deg);
-      bottom: 0;
-      height: 100%;
-      /* width: 70%; */
-      background: linear-gradient(
-        -90deg,
-        rgba(50, 51, 54, 0.692) 0%,
-        rgba(50, 51, 54, 0.692) 0%
-      );
-      z-index: -1;
-    }
   }
 }
 
@@ -157,9 +139,7 @@
   }
 
   @include mq($from: tablet-wide) {
-    display: none;
     position: absolute;
-    top: -70px;
     left: 0;
     width: auto;
     margin: 0;

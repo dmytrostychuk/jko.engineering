@@ -32,26 +32,26 @@ let scrollpos = window.scrollY;
 
 const header = document.querySelector('header');
 
-//Сколько пикселей нужно проскролить, чтобы добавить класс. Можете изменить значение
+// Скільки пікселів потрібно прокрутити, щоб додати клас. Можете змінити значення
 const scrollChange = 1;
 
-//Функция, которая будет добавлять классheader__menu
-const addClassOnScroll = () => header.classList.add('header__scroll');
-//Отслеживаем событие "скролл"
+// Функція, яка додає клас header__scroll
+const addClassOnScroll = () => {
+  header.classList.add('header__scroll');
+  document.querySelector('.nav__inner').classList.add('header__scroll');
+};
+
+// Функція, яка видаляє клас header__scroll
+const removeClassOnScroll = () => {
+  header.classList.remove('header__scroll');
+  document.querySelector('.nav__inner').classList.remove('header__scroll');
+};
+
+// Відстежуємо подію "скрол"
 window.addEventListener('scroll', function () {
   scrollpos = window.scrollY;
 
-  //Если прокрутили больше, чем мы указали в переменной scrollChange, то выполняется функция добавления класса
-  if (scrollpos >= scrollChange) {
-    addClassOnScroll();
-  }
-});
-
-const removeClassOnScroll = () => header.classList.remove('header__scroll');
-
-window.addEventListener('scroll', function () {
-  scrollpos = window.scrollY;
-
+  // Якщо прокрутили більше, ніж ми вказали в змінній scrollChange, то виконується функція додавання класу
   if (scrollpos >= scrollChange) {
     addClassOnScroll();
   } else {

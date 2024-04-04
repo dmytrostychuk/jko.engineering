@@ -50,6 +50,12 @@ ul {
     margin-bottom: 0;
   }
 }
+svg {
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+  vertical-align: middle;
+  fill: #ffffff;
+}
 
 .lock {
   overflow: hidden;

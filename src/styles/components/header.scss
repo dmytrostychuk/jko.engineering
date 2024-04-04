@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   transition: 0.5s ease;
-  background-color: #3233369a;
+  background-color: rgba(50, 51, 54, 0.692);
 }
 
 .header__scroll {
@@ -15,10 +15,21 @@
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
 }
 
+.header__logo-img {
+  width: 150px;
+
+  @include mq($from: phablet) {
+    width: 250px;
+  }
+  @include mq($from: tablet) {
+    width: 300px;
+  }
+}
+
 .header__wrapper {
   align-items: center;
 
-  @include mq($from: tablet) {
+  @include mq($from: tablet-wide) {
     display: flex;
     justify-content: space-between;
     max-width: 1700px;
@@ -40,7 +51,7 @@
   z-index: 2;
   position: relative;
 
-  @include mq($from: tablet) {
+  @include mq($from: tablet-wide) {
     background-color: inherit;
   }
 }
@@ -56,7 +67,7 @@
   max-width: $max-container-width;
   transition: 1s ease-in-out;
 
-  @include mq($from: tablet) {
+  @include mq($from: tablet-wide) {
     padding: 0;
   }
 }
@@ -65,7 +76,7 @@
   background-color: #323336;
   transition: 0.3s ease-in-out;
 
-  @include mq($from: tablet) {
+  @include mq($from: tablet-wide) {
     background-color: inherit;
   }
 }
@@ -81,13 +92,13 @@
     flex-direction: row;
   }
 
-  @include mq($from: tablet-wide) {
-    margin-right: 100px;
+  @include mq($from: tablet) {
+    margin-left: 30vw;
   }
 }
 
 .desktop-none {
-  @include mq($from: tablet) {
+  @include mq($from: tablet-wide) {
     display: none;
   }
 }
@@ -95,7 +106,7 @@
 .mobile-none {
   display: none;
 
-  @include mq($from: tablet) {
+  @include mq($from: tablet-wide) {
     display: block;
   }
 }

@@ -19,12 +19,17 @@
 
 .header__logo-img {
   width: 150px;
+  transition: 0.5s ease;
+
+  &:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
 
   @include mq($from: phablet) {
     width: 250px;
   }
   @include mq($from: tablet) {
-    width: 300px;
   }
 }
 
@@ -97,6 +102,10 @@
   @include mq($from: tablet) {
     margin-left: 30vw;
   }
+
+  @include mq($from: tablet-wide) {
+    margin-left: 0px;
+  }
 }
 
 .desktop-none {
@@ -111,4 +120,18 @@
   @include mq($from: tablet-wide) {
     display: block;
   }
+}
+.header__menu-ds {
+  @include mq($from: tablet-wide) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    max-height: 50px;
+    font-size: 14px;
+  }
+}
+
+.header__top {
+  background-color: #292b2c;
 }

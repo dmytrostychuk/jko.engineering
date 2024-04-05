@@ -1,3 +1,15 @@
+svg {
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+  vertical-align: middle;
+  fill: #ffffff;
+
+  &:hover {
+    fill: #323336;
+    transition: 0.3s ease-in-out;
+  }
+}
+
 .svg-hover {
   fill: #323336;
   transition: 0.3s ease-in-out;

@@ -11,10 +11,15 @@
     margin-bottom: 0px;
     margin-left: 6px;
   }
+
+  @include mq($from: tablet-wide) {
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
 }
 
 .header__btn_active {
   background-color: #8882825d;
-  color: #ff1900;
+  color: #02970a;
   border-radius: 3px;
 }

@@ -46,6 +46,15 @@ ul {
   }
 }
 
+.none {
+  @include mq($from: tablet-wide) {
+    display: none;
+  }
+  @include mq($from: desktop) {
+    display: flex;
+  }
+}
+
 .section {
   margin-bottom: $section-margin-bottom;
 

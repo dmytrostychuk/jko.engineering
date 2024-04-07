@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Where ever you're wanting to use a z-index value, 
 name it the same as your class and add in it into your variables/setting file, 
@@ -463,11 +464,24 @@ svg {
 
 .header__scroll {
   background-color: #323336;
-  z-index: 20;
   width: 100%;
   color: #ffffff;
   transition: 0.5s ease;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+}
+
+.header__scroll-nav {
+  background-color: rgba(50, 51, 54, 0.692);
+  transition: 0.5s ease;
+}
+
+.header__scroll .menu::after {
+  background-color: #323336;
+}
+
+.header__scroll .menu::before {
+  border-bottom: 56px solid #323336;
+  transition: 0.5s ease;
 }
 
 .header__logo-img {
@@ -887,6 +901,7 @@ svg {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: 0.5s ease;
 }
 
 .nav__list {
@@ -1214,27 +1229,35 @@ svg:hover {
     margin-bottom: 0px;
     margin-left: 0px;
   }
+  .header {
+    background-color: rgba(50, 51, 54, 0);
+  }
+  .header__scroll {
+    transition: 0.5s ease;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+  .header__scroll-nav {
+    background-color: rgba(255, 255, 255, 0);
+  }
   .header__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     max-width: 1700px;
-    height: 90px;
+    height: 56px;
     margin: 0 auto;
-    padding: 0 30px;
-  }
-  .header__wrapper {
     padding: 0 40px;
-    justify-content: end;
-    position: relative;
   }
   .header__inner {
     background-color: inherit;
-    position: absolute;
-    top: -60px;
-    left: 0;
+    width: 0;
   }
   .header__container {
     padding: 0;
+  }
+  .header__logo {
+    margin-bottom: 110px;
   }
   .header--active {
     background-color: inherit;
@@ -1269,6 +1292,29 @@ svg:hover {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+  .menu::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 56px;
+    top: 0;
+    left: 0;
+    background-color: rgba(50, 51, 54, 0.692);
+    transition: 0.5s ease;
+  }
+  .menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -56px;
+    width: 0;
+    height: 0;
+    border-left: 56px solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
+    border-right: 0 solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
+    border-bottom: 56px solid rgba(50, 51, 54, 0.692);
+    transition: 0.5s ease;
+  }
   .menu--active {
     display: flex;
     justify-content: end;
@@ -1290,7 +1336,7 @@ svg:hover {
   .nav__list li {
     justify-content: space-between;
     margin-bottom: 0;
-    padding: 15px 10px;
+    padding: 15px 7px;
     font-size: 15px;
     font-weight: 400;
     position: relative;
@@ -1305,6 +1351,7 @@ svg:hover {
   .nav__list {
     flex-direction: row;
     padding: 0;
+    margin: 0;
   }
   .nav__list-social {
     width: auto;
@@ -1405,11 +1452,11 @@ svg:hover {
   .link-social {
     display: flex;
   }
-  .nav__list li {
-    margin-left: 50px;
-  }
   .nav__list {
     font-weight: 500;
+  }
+  .nav__item:nth-child(2), .nav__item:nth-child(3) {
+    margin-left: 50px;
   }
   .nav__list-social li {
     margin-right: 20px;

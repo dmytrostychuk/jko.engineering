@@ -13,6 +13,30 @@
     align-items: center;
     background-color: inherit;
     transform: translateY(0);
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+      height: 56px;
+      top: 0;
+      left: 0;
+      background-color: rgba(50, 51, 54, 0.692);
+      transition: 0.5s ease;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -56px;
+      width: 0;
+      height: 0;
+      border-left: 56px solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
+      border-right: 0 solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
+      border-bottom: 56px solid rgba(50, 51, 54, 0.692);
+      transition: 0.5s ease;
+    }
   }
 
   @include mq($from: desktop) {
@@ -69,6 +93,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: 0.5s ease;
 
   @include mq($from: tablet-wide) {
     position: relative;
@@ -95,14 +120,11 @@
     @include mq($from: tablet) {
       margin-bottom: 25px;
     }
-    @include mq($from: desktop) {
-      margin-left: 50px;
-    }
 
     @include mq($from: tablet-wide) {
       justify-content: space-between;
       margin-bottom: 0;
-      padding: 15px 10px;
+      padding: 15px 7px;
       font-size: 15px;
       font-weight: 400;
       position: relative;
@@ -118,10 +140,20 @@
   @include mq($from: tablet-wide) {
     flex-direction: row;
     padding: 0;
+    margin: 0;
   }
 
   @include mq($from: desktop) {
     font-weight: 500;
+  }
+}
+
+.nav__item {
+  @include mq($from: desktop) {
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: 50px;
+    }
   }
 }
 

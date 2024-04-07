@@ -6,15 +6,40 @@
   background-color: rgba(50, 51, 54, 0.692);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+
+  @include mq($from: tablet-wide) {
+    background-color: rgba(50, 51, 54, 0);
+  }
 }
 
 .header__scroll {
   background-color: #323336;
-  z-index: 20;
   width: 100%;
   color: #ffffff;
   transition: 0.5s ease;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+
+  @include mq($from: tablet-wide) {
+    transition: 0.5s ease;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+}
+
+.header__scroll-nav {
+  background-color: rgba(50, 51, 54, 0.692);
+  transition: 0.5s ease;
+  @include mq($from: tablet-wide) {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.header__scroll .menu::after {
+  background-color: #323336;
+}
+.header__scroll .menu::before {
+  border-bottom: 56px solid #323336;
+  transition: 0.5s ease;
 }
 
 .header__logo-img {
@@ -37,18 +62,13 @@
   align-items: center;
 
   @include mq($from: tablet-wide) {
+    position: relative;
     display: flex;
     justify-content: space-between;
     max-width: 1700px;
-    height: 90px;
+    height: 56px;
     margin: 0 auto;
-    padding: 0 30px;
-  }
-
-  @include mq($from: tablet-wide) {
     padding: 0 40px;
-    justify-content: end;
-    position: relative;
   }
 
   @include mq($from: desktop) {
@@ -62,9 +82,7 @@
 
   @include mq($from: tablet-wide) {
     background-color: inherit;
-    position: absolute;
-    top: -60px;
-    left: 0;
+    width: 0;
   }
 }
 
@@ -86,6 +104,7 @@
 
 .header__logo {
   @include mq($from: tablet-wide) {
+    margin-bottom: 110px;
   }
 }
 

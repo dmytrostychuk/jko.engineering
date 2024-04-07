@@ -27,7 +27,6 @@ var rellax = new Rellax('.rellax', {
   horizontal: false,
 });
 
-//Записываем, сколько проскроллено по вертикали
 let scrollpos = window.scrollY;
 
 const header = document.querySelector('header');
@@ -38,13 +37,15 @@ const scrollChange = 1;
 // Функція, яка додає клас header__scroll
 const addClassOnScroll = () => {
   header.classList.add('header__scroll');
-  document.querySelector('.nav__inner').classList.add('header__scroll');
+  document.querySelector('.nav__inner').classList.add('header__scroll-nav');
+  document.querySelector('.menu').classList.add('header__scroll');
 };
 
 // Функція, яка видаляє клас header__scroll
 const removeClassOnScroll = () => {
   header.classList.remove('header__scroll');
-  document.querySelector('.nav__inner').classList.remove('header__scroll');
+  document.querySelector('.nav__inner').classList.remove('header__scroll-nav');
+  document.querySelector('.menu').classList.remove('header__scroll');
 };
 
 // Відстежуємо подію "скрол"

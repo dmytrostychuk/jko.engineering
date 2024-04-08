@@ -12,13 +12,16 @@
   @include mq($from: tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   @include mq($from: tablet-wide) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+}
+
+.services__cards-inner {
+  @include mq($from: tablet) {
+    width: 48%;
   }
 }
 
@@ -28,6 +31,7 @@
   margin-bottom: 30px;
   overflow: hidden;
   transition: 0.3s ease-in-out;
+  border-bottom: 2px solid #1e741e;
 
   @include mq($from: phablet) {
     width: 60vw;
@@ -36,18 +40,22 @@
   }
 
   @include mq($from: tablet) {
-    width: 35%;
+    width: 100%;
     margin: 5px;
+    border-bottom: none;
   }
 
   @include mq($from: tablet-wide) {
-    width: 27%;
-    margin: 15px;
-
     &:hover {
-      box-shadow: rgb(0, 0, 0) 0px 13px 27px -5px,
-        rgb(0, 0, 0) 0px 8px 16px -8px;
+      box-shadow: rgba(17, 19, 18, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     }
+  }
+}
+
+.services__card-vertical {
+  @include mq($from: tablet) {
+    width: 50%;
   }
 }
 
@@ -59,15 +67,14 @@
   position: relative;
   object-fit: cover;
 
-  @include mq($from: tablet) {
-    height: 100%;
-    object-fit: cover;
+  img {
+    display: block;
   }
 
-  img {
-    width: 100%;
+  @include mq($from: tablet) {
     height: 100%;
-    @include mq($from: tablet) {
+    img {
+      height: 100%;
     }
   }
 }
@@ -78,7 +85,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 98%;
+  height: 100%;
   background-image: linear-gradient(
     90deg,
     rgba(60, 60, 64, 0.7) 100%,
@@ -89,8 +96,6 @@
 }
 
 .services__hover-block {
-  position: relative;
-  padding: 24px;
   padding-top: 0px;
 
   @include mq($from: tablet) {
@@ -125,21 +130,23 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
+  color: #363839;
+  font-weight: 300;
+  letter-spacing: 1px;
 
   @include mq($from: tablet) {
     margin: 0;
     padding: 5px;
     padding-top: 15px;
-    color: #e74a51;
+    color: #ffffff;
   }
 
   @include mq($from: tablet-wide) {
     z-index: 2;
-    position: absolute;
     width: 100%;
     color: #ffffff;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 20px 0;
+    font-size: 18px;
     letter-spacing: 1px;
   }
 
@@ -154,14 +161,14 @@
   color: #757575;
 
   @include mq($from: tablet) {
-    padding: 5px;
+    padding: 10px;
     margin-top: 0;
     color: #fff;
   }
 
   @include mq($from: tablet-wide) {
     position: absolute;
-    bottom: -300px;
+    bottom: 100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -179,90 +186,49 @@
   }
 
   @include mq($from: desktop) {
-    bottom: -400px;
+    bottom: 100%;
     padding-top: 100px;
     font-size: 18px;
   }
 }
 
-.services__text--berries {
+.services__text-wrapper {
   @include mq($from: tablet-wide) {
-    background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/berries1.jpg);
-  }
-}
-
-.services__text--nuts {
-  @include mq($from: tablet-wide) {
-    background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/nuts-seeds1.jpg);
-  }
-}
-
-.services__text--fruits {
-  @include mq($from: tablet-wide) {
-    background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/fruits-1.jpg);
-  }
-}
-
-.services__text--herbs {
-  @include mq($from: tablet-wide) {
-    background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/herbs-1.jpg);
-  }
-}
-
-.services__text--meat {
-  @include mq($from: tablet-wide) {
-    background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/fishMeat-1.jpg);
-  }
-}
-
-.services__text--vegetables {
-  @include mq($from: tablet-wide) {
-    background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/vegetables-1.jpg);
+    padding: 20px;
+    margin: 0;
+    font-size: 16px;
   }
 }
 
 .services__card:hover .services__text {
   @include mq($from: tablet-wide) {
-    bottom: -60px;
+    bottom: 0;
+    padding: 0;
   }
 
   @include mq($from: desktop) {
-    bottom: -100px;
   }
+}
+
+.services__text--armor {
+  @include mq($from: tablet-wide) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(60, 60, 64, 0.7) 100%,
+        rgba(166, 166, 205, 1) 100%,
+        rgba(0, 212, 255, 1) 100%
+      ),
+      url(../img/service3-1.jpg);
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.services__text-link {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

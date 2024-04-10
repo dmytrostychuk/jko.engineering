@@ -10,7 +10,7 @@
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   @include mq($from: tablet) {
@@ -19,7 +19,7 @@
   }
 
   @include mq($from: tablet-wide) {
-    margin-bottom: 50px;
+    justify-content: space-between;
   }
 }
 
@@ -31,10 +31,21 @@
   }
 }
 
-.footer__block--social {
+.footer__logo {
+  @include mq($from: phablet) {
+    padding-bottom: 40px;
+  }
+
+  @include mq($from: tablet) {
+    width: auto;
+  }
+}
+
+.footer__social {
   position: relative;
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .footer__title-logo {
@@ -121,5 +132,14 @@
 }
 
 .footer__link-social {
-  padding: 0 15px;
+  padding-right: 20px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__flag {
+  margin-right: 30px;
 }

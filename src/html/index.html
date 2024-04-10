@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Main page</title>
+  <title>jko</title>
   <link rel="stylesheet" href="styles/style-min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,6 +75,10 @@
 
   </svg>
   <header class="header">
+    <button class="button__scroll" id="scrollButton" onclick="scrollToTop()">
+
+      <span class="scroll__aroww">Вгору</span>
+    </button>
     <div class="header__top mobile-none">
       <div class="header__menu-ds  header__wrapper">
         <div>
@@ -105,12 +109,10 @@
             </li>
 
             <li class="nav__item-social">
-              <a href="https://maps.app.goo.gl/j1XPK36Cq2uhf8iq9" class="link-social link--hover">
-                <svg class="link-social--svg" width="30" height="30">
-                  <use xlink:href="#location"></use>
-                </svg>
-                <span class="none">Луцьк</span>
-              </a>
+              <svg width="30" height="30">
+                <use xlink:href="#location"></use>
+              </svg>
+              <span class="none">Луцьк</span>
             </li>
           </ul>
         </div>
@@ -151,7 +153,7 @@
           <div class="nav__inner">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="services.html" class="link-hover" data-lang="nav_page-1">Обробка на верстатах ЧПК</a>
+                <a href="services.html" class="link-hover" data-lang="nav_page-1">Обробка на верстатах із ЧПК</a>
               </li>
               <li class="nav__item">
                 <a href="about-us.html" class="link-hover" data-lang="nav_page-2">Розробка конструкторської
@@ -184,16 +186,14 @@
                   <svg class="link-social--svg" width="30" height="20">
                     <use xlink:href="#instagram"></use>
                   </svg>
-                  <span class="none">#jko.engineering</span>
+                  <span class="none">jko.engineering</span>
                 </a>
               </li>
               <li class="nav__item-social">
-                <a href="https://maps.app.goo.gl/j1XPK36Cq2uhf8iq9" class="link-social link--hover">
-                  <svg class="link-social--svg" width="30" height="30">
-                    <use xlink:href="#location"></use>
-                  </svg>
-                  <span class="none">Десь в гаражах</span>
-                </a>
+                <svg class="" width="30" height="30">
+                  <use xlink:href="#location"></use>
+                </svg>
+                <span class="none">Луцьк</span>
               </li>
             </ul>
           </div>
@@ -208,7 +208,7 @@
       <div class="top-content__bg ">
       </div>
       <div class="top-content__text">
-        <h1 class=" top-content__title ">Не попробує, не взнаєш</h1>
+        <h1 class=" top-content__title ">Не попробуєш, не взнаєш</h1>
       </div>
     </section>
     <section class="section ">
@@ -232,6 +232,20 @@
           <div class="services__cards-inner">
             <article class="services__card">
               <div class="services__img">
+                <img src="img/service2.jpg" alt="berries" width="100%">
+              </div>
+              <div class="services__hover-block">
+
+                <div class="services__text">
+                  <h3 class="services__title">Обробка на верстатах із ЧПК</h3>
+                  <p class="services__text-wrapper">Ну тут песня тільки по картінці</p>
+
+                </div>
+              </div>
+              <a href="#" class="services__text-link"></a>
+            </article>
+            <article class="services__card">
+              <div class="services__img">
                 <img src="img/service1.jpg" alt="berries" width="100%">
               </div>
               <div class="services__hover-block">
@@ -245,20 +259,7 @@
               <a href="#" class="services__text-link"></a>
             </article>
 
-            <article class="services__card">
-              <div class="services__img">
-                <img src="img/service2.jpg" alt="berries" width="100%">
-              </div>
-              <div class="services__hover-block">
 
-                <div class="services__text">
-                  <h3 class="services__title">Обробка на верстатах з ЧПК</h3>
-                  <p class="services__text-wrapper">Ну тут песня тільки по картінці</p>
-
-                </div>
-              </div>
-              <a href="#" class="services__text-link"></a>
-            </article>
           </div>
 
 
@@ -276,11 +277,25 @@
             </div>
             <a href="#" class="services__text-link"></a>
           </article>
-
-
-
         </div>
       </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="communication">
+          <h5 class="communication__title">Залишилися запитання? Залиште свої данні, ми з Вами зв'яжемося!</h5>
+
+          <div class="button-slip">
+            <button type="button" class="modal-active button-slip__link menu__btn">
+              <div class="button-slip__link-text">Напишіть<br><span class="button-slip__link-span">нам</span></div>
+              <div class="button-slip__link-box"></div>
+
+
+            </button>
+          </div>
+        </div>
+      </div>
+
     </section>
   </main>
   <footer class="footer">
@@ -288,7 +303,15 @@
       <div class="footer__container">
         <div class="footer__logo">
           <h1 class="footer__title-logo"><a href="#" class="footer__title-logo--link">jko.enjineering</a></h1>
-          <p class="footer__text">subtitle</p>
+          <p class="footer__text">Беремо і робимо</p>
+          <div class="footer__social">
+            <a href="#" class="footer__link-social"><svg class="footer__link-svg--social" width="30" height="20">
+                <use xlink:href="#facebook"></use>
+              </svg></a>
+            <a href="#" class="footer__link-social"><svg class="footer__link-svg--social" width="30" height="20">
+                <use xlink:href="#instagram"></use>
+              </svg></a>
+          </div>
         </div>
         <div class="footer__block">
           <h3 class="footer__title">Контакти</h3>
@@ -306,22 +329,40 @@
         <div class="footer__block">
           <h3 class="footer__title">Навігація</h3>
           <ul class="footer__contact-list">
-            <li class="footer__nav-item"><a class="footer__link" href="#">1</a></li>
-            <li class="footer__nav-item"><a class="footer__link" href="#">2</a></li>
-            <li class="footer__nav-item"><a class="footer__link" href="#">3</a></li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Обробка на верстатах із ЧПК</a></li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Розробка конструкторської документації</a>
+            </li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Збройові аксесуари</a></li>
           </ul>
         </div>
-        <div class="footer__block footer__block--social">
-          <a href="#" class="footer__link-social"><svg class="footer__link-svg--social" width="30" height="20">
-              <use xlink:href="#facebook"></use>
-            </svg></a>
-          <a href="#" class="footer__link-social"><svg class="footer__link-svg--social" width="30" height="20">
-              <use xlink:href="#instagram"></use>
-            </svg></a>
+
+      </div>
+      <div class="footer__copyright ">
+        <div class="footer__flag">
+          <img src="../img/flag_Ua.jpg" alt="Flag UA" width="21">
+          <span>UA</span>
         </div>
+        <div class="footer__rights">© 2024 jko.engineering. Усі права захищено.</div>
       </div>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal__inner">
+      <div class="modal-content">
+        <button class="close-button"></button>
+        <section class="modal__content">
+          <h4 class="modal__title">Зворотній зв'язок</h4>
+          <p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше
+            звʼяжеться з Вами!</p>
+
+          <form action="POST" class="modal__form">
+            <input class="modal__iput" type="text" name="" id="" placeholder="телефон або e-mail">
+            <button class="button button-modal" type="submit">Відправити запит</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
   <script>
     // Accepts any class name

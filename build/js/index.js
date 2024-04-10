@@ -5,17 +5,8 @@ const headerContainer = document.querySelector('.header__container');
 navBarBtn.addEventListener('click', () => {
   menu.classList.toggle('menu--active');
   headerContainer.classList.toggle('header--active');
+  navBarBtn.classList.toggle('opened');
 });
-
-opened = false;
-window.onload = function () {
-  var btn = document.getElementsByTagName('button')[0];
-  btn.addEventListener('click', onBtnClick);
-};
-
-function onBtnClick(e) {
-  this.classList.toggle('opened');
-}
 
 // Also can pass in optional settings block
 var rellax = new Rellax('.rellax', {
@@ -90,3 +81,23 @@ closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
+
+// Get the scroll button element
+var scrollButton = document.getElementById('scrollButton');
+
+// Show scroll button when scrolling 100vh
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= window.innerHeight) {
+    scrollButton.style.opacity = '1';
+  } else {
+    scrollButton.style.opacity = '0';
+  }
+});
+
+// Function to scroll to the top when the button is clicked
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}

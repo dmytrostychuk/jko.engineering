@@ -477,6 +477,7 @@ svg {
 
 .header__scroll .menu::after {
   background-color: #323336;
+  box-shadow: 0 15px 20px -20px #fafafa;
 }
 
 .header__scroll .menu::before {
@@ -1143,6 +1144,99 @@ svg:hover {
   height: 100%;
 }
 
+.footer {
+  background-color: #323336;
+  padding: 30px 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer__block {
+  margin: 60px 0;
+}
+
+.footer__block--social {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__title-logo {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid #ffffff;
+  transition: all, 0.3s;
+}
+.footer__title-logo:hover {
+  border: 1px solid #34a030;
+}
+
+.footer__title-logo--link {
+  display: block;
+  padding: 10px;
+}
+.footer__title-logo--link:hover {
+  color: #34a030;
+}
+
+.footer__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.footer__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.footer__title::first-letter {
+  color: #34a030;
+}
+
+.footer__contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__contact-item {
+  position: relative;
+  margin: 15px 0;
+}
+
+.footer__link {
+  padding-left: 40px;
+  transition: 0.6s ease-in-out;
+}
+.footer__link:hover {
+  color: #34a030;
+}
+.footer__link:hover svg {
+  fill: #34a030;
+}
+
+.footer__link-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.footer__nav-item {
+  margin: 15px 0;
+}
+.footer__nav-item a {
+  padding: 0;
+}
+
+.footer__link-social {
+  padding: 0 15px;
+}
+
 @media (min-width: 560px) {
   .container {
     padding: 0 20px;
@@ -1167,6 +1261,18 @@ svg:hover {
     width: 60vw;
     margin: 0 auto;
     margin-bottom: 30px;
+  }
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer__block {
+    margin: 0 10px;
+  }
+  .footer__title {
+    margin-top: 0;
   }
 }
 
@@ -1235,6 +1341,10 @@ svg:hover {
     padding: 10px;
     margin-top: 0;
     color: #fff;
+  }
+  .footer__container {
+    margin: 0 auto;
+    max-width: 1000px;
   }
 }
 
@@ -1439,6 +1549,9 @@ svg:hover {
     background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/service3-1.jpg);
     background-size: contain;
     background-position: center;
+  }
+  .footer__container {
+    margin-bottom: 50px;
   }
 }
 

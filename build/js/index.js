@@ -7,8 +7,23 @@ navBarBtn.addEventListener('click', () => {
   headerContainer.classList.toggle('header--active');
   navBarBtn.classList.toggle('opened');
 });
+document.addEventListener('click', function (event) {
+  const isClickInsideMenu = menu.contains(event.target);
+  const isClickInsideNavbarBtn = navBarBtn.contains(event.target);
+  const isClickInsideHeaderContainer = headerContainer.contains(event.target);
 
-// Also can pass in optional settings block
+  if (
+    !isClickInsideMenu &&
+    !isClickInsideNavbarBtn &&
+    !isClickInsideHeaderContainer
+  ) {
+    // Якщо клік відбувся поза меню, поза кнопкою і поза header__container, закриємо меню
+    menu.classList.remove('menu--active');
+    headerContainer.classList.remove('header--active');
+    navBarBtn.classList.remove('opened');
+  }
+});
+
 var rellax = new Rellax('.rellax', {
   speed: -2,
   center: false,
@@ -22,35 +37,30 @@ let scrollpos = window.scrollY;
 
 const header = document.querySelector('header');
 
-// Скільки пікселів потрібно прокрутити, щоб додати клас. Можете змінити значення
 const scrollChange = 1;
 
-// Функція, яка додає клас header__scroll
 const addClassOnScroll = () => {
   header.classList.add('header__scroll');
   document.querySelector('.nav__inner').classList.add('header__scroll-nav');
   document.querySelector('.menu').classList.add('header__scroll');
 };
 
-// Функція, яка видаляє клас header__scroll
 const removeClassOnScroll = () => {
   header.classList.remove('header__scroll');
   document.querySelector('.nav__inner').classList.remove('header__scroll-nav');
   document.querySelector('.menu').classList.remove('header__scroll');
 };
 
-// Відстежуємо подію "скрол"
 window.addEventListener('scroll', function () {
   scrollpos = window.scrollY;
 
-  // Якщо прокрутили більше, ніж ми вказали в змінній scrollChange, то виконується функція додавання класу
   if (scrollpos >= scrollChange) {
     addClassOnScroll();
   } else {
     removeClassOnScroll();
   }
 });
-
+// - modal
 var modal = document.querySelector('.modal');
 var triggers = document.querySelectorAll('.modal-active');
 var closeButton = document.querySelector('.close-button');
@@ -101,3 +111,36 @@ function scrollToTop() {
     behavior: 'smooth',
   });
 }
+
+// form
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.modal__form');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent the form from submitting normally
+
+    const email = document.querySelector('.modal__input').value;
+    sendEmail(email);
+  });
+
+  function sendEmail(email) {
+    fetch('send_email.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: email }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert('Message sent!');
+        } else {
+          alert('Error sending message');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('Error sending message');
+      });
+  }
+});

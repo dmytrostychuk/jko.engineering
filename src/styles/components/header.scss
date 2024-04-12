@@ -19,6 +19,11 @@
   color: #ffffff;
   transition: 0.5s ease;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  color: #ffffffb2;
+
+  a {
+    color: #ffffffb2;
+  }
 
   @include mq($from: tablet-wide) {
     transition: 0.5s ease;
@@ -139,19 +144,6 @@
   }
 }
 
-.desktop-none {
-  @include mq($from: tablet-wide) {
-    display: none;
-  }
-}
-
-.mobile-none {
-  display: none;
-
-  @include mq($from: tablet-wide) {
-    display: block;
-  }
-}
 .header__menu-ds {
   @include mq($from: tablet-wide) {
     display: flex;

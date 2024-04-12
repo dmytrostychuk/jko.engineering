@@ -414,6 +414,10 @@ ul {
   padding: 0 20px;
 }
 
+.mobile-none {
+  display: none;
+}
+
 .section {
   margin-bottom: 40px;
 }
@@ -519,6 +523,53 @@ svg {
           transform: rotate(45deg);
 }
 
+.button-slip {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.button-slip__link {
+  background-color: inherit;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+}
+.button-slip__link:hover .button-slip__link-text {
+  left: 30px;
+}
+.button-slip__link:hover .button-slip__link-box {
+  background-color: #5bb860;
+}
+
+.button-slip__link-text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 0;
+  text-align: start;
+  transition: left 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #323336;
+}
+
+.button-slip__link-span {
+  border-bottom: 3px solid #000000;
+}
+
+.button-slip__link-box {
+  margin-left: 60px;
+  height: 200px;
+  width: 200px;
+  background: #f6e701;
+  transition: background 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
 .header {
   z-index: 10;
   position: fixed;
@@ -536,6 +587,10 @@ svg {
   color: #ffffff;
   transition: 0.5s ease;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+.header__scroll a {
+  color: rgba(255, 255, 255, 0.6980392157);
 }
 
 .header__scroll-nav {
@@ -593,10 +648,6 @@ svg {
 
 .header__lang {
   display: flex;
-}
-
-.mobile-none {
-  display: none;
 }
 
 .header__top {
@@ -657,10 +708,10 @@ svg {
 }
 .link-hover:hover {
   transition: 0.3s;
-  color: rgba(255, 255, 255, 0.61);
+  color: #ffffff;
 }
 .link-hover:active {
-  color: rgba(255, 255, 255, 0.363);
+  color: rgba(62, 204, 86, 0.493);
 }
 .link-hover:hover:before {
   -webkit-transform: scaleX(1);
@@ -1077,70 +1128,6 @@ svg:hover {
   padding-top: 25vh;
 }
 
-.section {
-  z-index: 100;
-  background-color: #ffffff;
-  margin-bottom: 0;
-  color: #363839;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #f2f2f2;
-  border-top: 1px solid #f2f2f2;
-}
-
-.section__title {
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 35px;
-}
-
-.section__text {
-  font-size: 16px;
-  line-height: 1.5em;
-  word-spacing: 0.6em;
-  margin-bottom: 20px;
-}
-
-.section--center-text {
-  text-align: center;
-}
-
-.section {
-  z-index: 100;
-  background-color: #ffffff;
-  margin-bottom: 0;
-  color: #363839;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #f2f2f2;
-  border-top: 1px solid #f2f2f2;
-}
-
-.section__title {
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 35px;
-}
-
-.section__text {
-  font-size: 16px;
-  line-height: 1.5em;
-  word-spacing: 0.6em;
-  margin-bottom: 20px;
-}
-
-.section--center-text {
-  text-align: center;
-}
-
 .services {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1172,6 +1159,7 @@ svg:hover {
   object-fit: cover;
 }
 .services__img img {
+  width: 100%;
   display: block;
 }
 
@@ -1212,6 +1200,38 @@ svg:hover {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.section {
+  z-index: 100;
+  background-color: #ffffff;
+  margin-bottom: 0;
+  color: #363839;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+}
+
+.section__title {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+.section__text {
+  font-size: 16px;
+  line-height: 1.5em;
+  word-spacing: 0.6em;
+  margin-bottom: 20px;
+}
+
+.section--center-text {
+  text-align: center;
 }
 
 .footer {
@@ -1384,7 +1404,7 @@ svg:hover {
   margin-bottom: 20px;
 }
 
-.modal__iput {
+.modal__input {
   padding-bottom: 10px;
   border: none;
   width: 70%;
@@ -1394,7 +1414,7 @@ svg:hover {
   background-color: inherit;
   text-align: center;
 }
-.modal__iput:focus {
+.modal__input:focus {
   outline: 0;
 }
 
@@ -1591,6 +1611,12 @@ svg:hover {
   .container {
     padding: 0 40px;
   }
+  .desktop-none {
+    display: none;
+  }
+  .mobile-none {
+    display: block;
+  }
   .none {
     display: none;
   }
@@ -1633,12 +1659,6 @@ svg:hover {
   }
   .header__lang {
     margin-left: 0px;
-  }
-  .desktop-none {
-    display: none;
-  }
-  .mobile-none {
-    display: block;
   }
   .header__menu-ds {
     display: flex;

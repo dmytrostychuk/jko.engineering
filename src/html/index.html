@@ -76,7 +76,6 @@
   </svg>
   <header class="header">
     <button class="button__scroll" id="scrollButton" onclick="scrollToTop()">
-
       <span class="scroll__aroww">Вгору</span>
     </button>
     <div class="header__top mobile-none">
@@ -107,7 +106,6 @@
                 <span>jko.engineering@gmail.com</span>
               </a>
             </li>
-
             <li class="nav__item-social">
               <svg width="30" height="30">
                 <use xlink:href="#location"></use>
@@ -116,18 +114,13 @@
             </li>
           </ul>
         </div>
-
         <div class="header__lang mobile-none">
           <button class="header__btn" data-btn="ua">UA</button>
           <button class="header__btn" data-btn="en">EN</button>
         </div>
-
       </div>
     </div>
-
-
     <div class="header__wrapper">
-
       <div class="header__inner ">
         <div class="header__container">
           <div class="header__logo">
@@ -148,7 +141,6 @@
       <div class="header__menu menu">
         <div class="menu__wrapper">
           <div>
-
           </div>
           <div class="nav__inner">
             <ul class="nav__list">
@@ -163,7 +155,6 @@
                 <a href="contacts.html" class="link-hover" data-lang="nav_page-3">Збройові аксесуари</a>
               </li>
             </ul>
-
             <ul class="nav__list nav__list-social desktop-none">
               <li class="nav__item-social">
                 <a class="link-social link--hover" href="tel:+380736308431">
@@ -197,8 +188,6 @@
               </li>
             </ul>
           </div>
-
-          </nav>
         </div>
       </div>
     </div>
@@ -208,7 +197,7 @@
       <div class="top-content__bg ">
       </div>
       <div class="top-content__text">
-        <h1 class=" top-content__title ">Не попробуєш, не взнаєш</h1>
+        <h3 class=" top-content__title ">Не попробуєш, не взнаєш</h3>
       </div>
     </section>
     <section class="section ">
@@ -224,55 +213,43 @@
       </div>
 
     </section>
-
     <section class="section services">
       <div class="service__container container">
         <div class="services__card-box">
-
           <div class="services__cards-inner">
             <article class="services__card">
               <div class="services__img">
-                <img src="img/service2.jpg" alt="berries" width="100%">
+                <img src="img/service2.jpg" alt="milling" width="100">
               </div>
               <div class="services__hover-block">
-
                 <div class="services__text">
                   <h3 class="services__title">Обробка на верстатах із ЧПК</h3>
                   <p class="services__text-wrapper">Ну тут песня тільки по картінці</p>
-
                 </div>
               </div>
               <a href="#" class="services__text-link"></a>
             </article>
             <article class="services__card">
               <div class="services__img">
-                <img src="img/service1.jpg" alt="berries" width="100%">
+                <img src="img/service1.jpg" alt="draw" width="100">
               </div>
               <div class="services__hover-block">
-
                 <div class="services__text">
                   <h3 class="services__title">Розробка конструкторської документації</h3>
                   <p class="services__text-wrapper">Документація така шо не до*батися</p>
-
                 </div>
               </div>
               <a href="#" class="services__text-link"></a>
             </article>
-
-
           </div>
-
-
           <article class="services__card services__card-vertical">
-
             <div class="services__img-vertical services__img">
-              <img src="img/service3.jpg" alt="berries" width="100%">
+              <img src="img/service3.jpg" alt="armor" width="100">
             </div>
             <div class="services__hover-block">
               <div class="services__text services__text--armor">
                 <h3 class="services__title">Збройові аксесуари</h3>
                 <p class="services__text-wrapper">Ті самі аксесуари, тільки для зброї</p>
-
               </div>
             </div>
             <a href="#" class="services__text-link"></a>
@@ -284,18 +261,14 @@
       <div class="container">
         <div class="communication">
           <h5 class="communication__title">Залишилися запитання? Залиште свої данні, ми з Вами зв'яжемося!</h5>
-
           <div class="button-slip">
-            <button type="button" class="modal-active button-slip__link menu__btn">
+            <a href="#" class="modal-active button-slip__link menu__btn" onclick="return false;">
               <div class="button-slip__link-text">Напишіть<br><span class="button-slip__link-span">нам</span></div>
               <div class="button-slip__link-box"></div>
-
-
-            </button>
+            </a>
           </div>
         </div>
       </div>
-
     </section>
   </main>
   <footer class="footer">
@@ -305,7 +278,6 @@
           <h1 class="footer__title-logo"><a href="#" class="footer__title-logo--link">jko.enjineering</a></h1>
           <p class="footer__text">Беремо і робимо</p>
           <div class="footer__social">
-
           </div>
         </div>
         <div class="footer__block">
@@ -353,15 +325,17 @@
           <h4 class="modal__title">Зворотній зв'язок</h4>
           <p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше
             звʼяжеться з Вами!</p>
-
-          <form action="POST" class="modal__form">
-            <input class="modal__iput" type="text" name="" id="" placeholder="телефон або e-mail">
+          <form class="modal__form">
+            <input class="modal__input" type="text" placeholder="телефон або e-mail">
             <button class="button button-modal" type="submit">Відправити запит</button>
           </form>
         </section>
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
+
   <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
   <script>
     // Accepts any class name

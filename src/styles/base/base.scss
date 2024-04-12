@@ -46,6 +46,20 @@ ul {
   }
 }
 
+.desktop-none {
+  @include mq($from: tablet-wide) {
+    display: none;
+  }
+}
+
+.mobile-none {
+  display: none;
+
+  @include mq($from: tablet-wide) {
+    display: block;
+  }
+}
+
 .none {
   @include mq($from: tablet-wide) {
     display: none;

@@ -5,7 +5,20 @@ const langButtons = document.querySelectorAll('[data-btn]');
 const currentPathName = window.location.pathname;
 let currentTextObject = {};
 
-const homeTexts = {};
+const homeTexts = {
+  'nav_page-1': {
+    ua: 'Обробка на верстатах із ЧПК',
+    en: 'Computer Numerical Control (CNC) Machining',
+  },
+  'nav_page-2': {
+    ua: 'Розробка конструкторської документації',
+    en: 'Engineering Documentation Development',
+  },
+  'nav_page-3': {
+    ua: 'Збройові аксесуари',
+    en: 'Firearm Accessories',
+  },
+};
 function checkPagePathName() {
   switch (currentPathName) {
     case '/index.html':

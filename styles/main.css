@@ -1160,6 +1160,7 @@ svg:hover {
   overflow: hidden;
   transition: 0.3s ease-in-out;
   border-bottom: 2px solid #1e741e;
+  border-radius: 20px;
 }
 
 .services__container {
@@ -1479,6 +1480,9 @@ svg:hover {
   .footer__title {
     margin-top: 0;
   }
+  .footer__copyright {
+    margin-top: 30px;
+  }
   .communication {
     width: 60vw;
     margin: 0 auto;
@@ -1787,6 +1791,9 @@ svg:hover {
   }
   .footer__container {
     justify-content: space-between;
+  }
+  .footer__copyright {
+    justify-content: space-around;
   }
   .communication__title {
     margin-right: 40px;

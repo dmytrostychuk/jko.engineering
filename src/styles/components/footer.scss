@@ -138,6 +138,12 @@
 .footer__copyright {
   display: flex;
   justify-content: center;
+  @include mq($from: phablet) {
+    margin-top: 30px;
+  }
+  @include mq($from: tablet-wide) {
+    justify-content: space-around;
+  }
 }
 
 .footer__flag {

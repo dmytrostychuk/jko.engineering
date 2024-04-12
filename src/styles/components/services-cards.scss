@@ -32,6 +32,7 @@
   overflow: hidden;
   transition: 0.3s ease-in-out;
   border-bottom: 2px solid #1e741e;
+  border-radius: 20px;
 
   @include mq($from: phablet) {
     width: 60vw;

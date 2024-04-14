@@ -436,10 +436,6 @@ svg {
   overflow: hidden;
 }
 
-.footer {
-  margin-top: auto;
-}
-
 .header__btn {
   padding: 5px 10px;
   margin-bottom: 7px;
@@ -473,9 +469,10 @@ svg {
 
 .button__scroll {
   position: fixed;
+  padding: 5px;
   bottom: 20px;
   right: 20px;
-  width: 65px;
+  width: 80px;
   height: 55px;
   background-color: rgba(45, 117, 50, 0.5333333333);
   border: none;
@@ -485,7 +482,7 @@ svg {
   opacity: 0;
   transition: opacity 0.3s ease;
   transition: 0.3s ease;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .button__scroll:hover {
   background-color: #2d7532;
@@ -497,7 +494,6 @@ svg {
 }
 
 .content {
-  /* Add some height to enable scrolling */
   height: 200vh;
 }
 
@@ -513,61 +509,14 @@ svg {
   background-color: #fff;
 }
 .scroll__aroww::after {
-  right: 26px;
+  right: 33px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .scroll__aroww::before {
-  left: 26px;
+  left: 33px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-}
-
-.button-slip {
-  position: relative;
-  max-width: 320px;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 25px;
-}
-
-.button-slip__link {
-  background-color: inherit;
-  border: none;
-  color: #000000;
-  cursor: pointer;
-}
-.button-slip__link:hover .button-slip__link-text {
-  left: 30px;
-}
-.button-slip__link:hover .button-slip__link-box {
-  background-color: #5bb860;
-}
-
-.button-slip__link-text {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  left: 0;
-  text-align: start;
-  transition: left 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 50px;
-  color: #323336;
-}
-
-.button-slip__link-span {
-  border-bottom: 3px solid #000000;
-}
-
-.button-slip__link-box {
-  margin-left: 60px;
-  height: 200px;
-  width: 200px;
-  background: #f6e701;
-  transition: background 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 
 .header {
@@ -616,6 +565,7 @@ svg {
   opacity: 0.5;
   transition: 0.5s ease;
 }
+
 .header__wrapper {
   align-items: center;
 }
@@ -988,6 +938,7 @@ svg {
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
+
 .menu--active {
   position: absolute;
   -webkit-transform: translateY(0);
@@ -1131,7 +1082,7 @@ svg:hover {
 .services {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #fafafa;
+  background-color: #eeeeee;
   border-bottom: 1px solid #f2f2f2;
   border-top: 1px solid #f2f2f2;
 }
@@ -1190,6 +1141,7 @@ svg:hover {
 
 .services__text {
   line-height: 1.4em;
+  text-align: center;
   color: #757575;
 }
 
@@ -1204,13 +1156,12 @@ svg:hover {
 
 .section {
   z-index: 100;
-  background-color: #ffffff;
   margin-bottom: 0;
   color: #363839;
   padding-top: 30px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #f2f2f2;
-  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #dadada;
+  border-top: 1px solid #dadada;
 }
 
 .section__title {
@@ -1232,6 +1183,10 @@ svg:hover {
 
 .section--center-text {
   text-align: center;
+}
+
+.section--bcg {
+  background-color: #ffffff;
 }
 
 .footer {
@@ -1329,12 +1284,24 @@ svg:hover {
 }
 
 .footer__copyright {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .footer__flag {
-  margin-right: 30px;
+  position: absolute;
+  left: 20px;
+}
+
+.footer__rights {
+  text-align: center;
+}
+
+.footer {
+  margin-top: auto;
 }
 
 .communication {
@@ -1468,9 +1435,6 @@ svg:hover {
   .button {
     font-size: 20px;
   }
-  .header__logo-img {
-    width: 250px;
-  }
   .header__lang {
     flex-direction: row;
   }
@@ -1499,9 +1463,6 @@ svg:hover {
   }
   .footer__title {
     margin-top: 0;
-  }
-  .footer__copyright {
-    margin-top: 30px;
   }
   .communication {
     width: 60vw;
@@ -1812,8 +1773,8 @@ svg:hover {
   .footer__container {
     justify-content: space-between;
   }
-  .footer__copyright {
-    justify-content: space-around;
+  .footer__flag {
+    left: 40px;
   }
   .communication__title {
     margin-right: 40px;
@@ -1865,5 +1826,8 @@ svg:hover {
     bottom: 100%;
     padding-top: 100px;
     font-size: 18px;
+  }
+  .footer__flag {
+    left: 50px;
   }
 }

@@ -136,16 +136,28 @@
 }
 
 .footer__copyright {
-  display: flex;
-  justify-content: center;
-  @include mq($from: phablet) {
-    margin-top: 30px;
-  }
-  @include mq($from: tablet-wide) {
-    justify-content: space-around;
-  }
+  position: relative;
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .footer__flag {
-  margin-right: 30px;
+  position: absolute;
+  left: 20px;
+  @include mq($from: tablet-wide) {
+    left: 40px;
+  }
+  @include mq($from: desktop) {
+    left: 50px;
+  }
+}
+
+.footer__rights {
+  text-align: center;
+}
+
+.footer {
+  margin-top: auto;
 }

@@ -1,5 +1,6 @@
 .communication {
   color: #363839;
+
   @include mq($from: phablet) {
     width: 60vw;
     margin: 0 auto;

@@ -1,12 +1,11 @@
 .section {
   z-index: 100;
-  background-color: #ffffff;
   margin-bottom: 0;
   color: #363839;
   padding-top: 30px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #f2f2f2;
-  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #dadada;
+  border-top: 1px solid #dadada;
 }
 
 .section__title {
@@ -28,4 +27,8 @@
 
 .section--center-text {
   text-align: center;
+}
+
+.section--bcg {
+  background-color: #ffffff;
 }

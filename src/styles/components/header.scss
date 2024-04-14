@@ -44,9 +44,14 @@
   background-color: #323336;
   box-shadow: 0 15px 20px -20px #fafafa;
 }
+
 .header__scroll .menu::before {
   border-top: 56px solid #323336;
   transition: 0.5s ease;
+}
+
+.header__scroll .active-link {
+  color: #ffffff;
 }
 
 .header__logo-img {

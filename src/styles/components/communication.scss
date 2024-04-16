@@ -1,5 +1,6 @@
 .communication {
-  color: #363839;
+  // color: #363839;
+  color: #ffffff;
 
   @include mq($from: phablet) {
     width: 60vw;
@@ -17,7 +18,8 @@
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #363839;
+  // color: #363839;
+  color: #ffffff;
   margin-top: 0;
 
   @include mq($from: tablet-wide) {

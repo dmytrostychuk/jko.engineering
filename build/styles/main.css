@@ -392,6 +392,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
 }
 
 a {
@@ -640,18 +641,18 @@ svg {
   font-size: 40px;
   font-weight: 600;
   line-height: 50px;
-  color: #323336;
+  color: #ffffff;
 }
 
 .button-slip__link-span {
-  border-bottom: 3px solid #000000;
+  border-bottom: 3px solid #ffffff;
 }
 
 .button-slip__link-box {
   margin-left: 60px;
   height: 200px;
   width: 200px;
-  background: #f6e701;
+  background: rgba(246, 230, 1, 0.5490196078);
   transition: background 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 
@@ -1113,8 +1114,6 @@ svg:hover {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eeeeee;
-  border-bottom: 1px solid #f2f2f2;
-  border-top: 1px solid #f2f2f2;
 }
 
 .services__card-box {
@@ -1187,12 +1186,11 @@ svg:hover {
 .section {
   z-index: 100;
   margin-bottom: 0;
-  color: #363839;
+  color: #ffffff;
   padding-top: 30px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #dadada;
-  border-top: 1px solid #dadada;
-  background-color: #eeeeee;
+  border-bottom: 2px solid #308628;
+  background-color: #323336;
 }
 
 .section__title {
@@ -1217,7 +1215,7 @@ svg:hover {
 }
 
 .section--bcg {
-  background-color: #ffffff;
+  background-color: #323336;
 }
 
 .footer {
@@ -1336,14 +1334,14 @@ svg:hover {
 }
 
 .communication {
-  color: #363839;
+  color: #ffffff;
 }
 
 .communication__title {
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #363839;
+  color: #ffffff;
   margin-top: 0;
 }
 
@@ -1814,7 +1812,7 @@ svg:hover {
     font-size: 6vw;
   }
   .services__card:hover {
-    box-shadow: rgba(17, 19, 18, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    box-shadow: 0px 0px 9px 0px rgb(255, 255, 255);
   }
   .services__hover-block {
     position: absolute;

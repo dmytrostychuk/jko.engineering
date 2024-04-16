@@ -2,8 +2,8 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eeeeee;
-  border-bottom: 1px solid #f2f2f2;
-  border-top: 1px solid #f2f2f2;
+  // border-bottom: 1px solid #f2f2f2;
+  // border-top: 1px solid #f2f2f2;
 }
 
 .services__card-box {
@@ -45,8 +45,7 @@
 
   @include mq($from: tablet-wide) {
     &:hover {
-      box-shadow: rgba(17, 19, 18, 0.48) 6px 2px 16px 0px,
-        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+      box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 1);
     }
   }
 }

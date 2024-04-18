@@ -1103,7 +1103,7 @@ svg:hover {
 .top-content__title {
   position: relative;
   text-transform: uppercase;
-  font-size: 13vw;
+  font-size: 12vw;
   margin: 0;
   font-weight: 600;
   color: #ffffff;
@@ -1317,6 +1317,7 @@ svg:hover {
 }
 
 .footer__copyright {
+  display: flex;
   position: relative;
   padding: 20px;
   padding-bottom: 0;
@@ -1325,8 +1326,7 @@ svg:hover {
 }
 
 .footer__flag {
-  position: absolute;
-  left: 20px;
+  position: relative;
 }
 
 .footer__rights {
@@ -1573,6 +1573,13 @@ svg:hover {
   }
   .footer__title {
     margin-top: 0;
+  }
+  .footer__copyright {
+    display: block;
+  }
+  .footer__flag {
+    position: absolute;
+    left: 20px;
   }
   .communication {
     width: 60vw;

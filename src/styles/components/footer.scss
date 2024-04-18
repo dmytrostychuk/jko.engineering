@@ -136,16 +136,24 @@
 }
 
 .footer__copyright {
+  display: flex;
   position: relative;
   padding: 20px;
   padding-bottom: 0;
   margin: 0 auto;
   margin-top: 50px;
+  @include mq($from: phablet) {
+    display: block;
+  }
 }
 
 .footer__flag {
-  position: absolute;
-  left: 20px;
+  position: relative;
+
+  @include mq($from: phablet) {
+    position: absolute;
+    left: 20px;
+  }
   @include mq($from: tablet-wide) {
     left: 40px;
   }

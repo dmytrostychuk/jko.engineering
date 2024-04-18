@@ -146,6 +146,8 @@
 }
 
 .nav__item {
+  position: relative;
+
   @include mq($from: desktop) {
     &:nth-child(2),
     &:nth-child(3) {

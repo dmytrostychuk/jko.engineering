@@ -209,12 +209,11 @@
 .services__text--armor {
   @include mq($from: tablet-wide) {
     background-image: linear-gradient(
-        90deg,
-        rgba(60, 60, 64, 0.7) 100%,
-        rgba(166, 166, 205, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-      ),
-      url(../img/service3-1.jpg);
+      90deg,
+      rgba(60, 60, 64, 0.7) 100%,
+      rgba(166, 166, 205, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
     background-size: contain;
     background-position: center;
   }

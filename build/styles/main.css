@@ -1084,7 +1084,7 @@ svg:hover {
 }
 
 .top-content--index {
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/header_bkg1.jpg);
+  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/header_bkg2.jpg);
 }
 
 .top-content__text {
@@ -1980,7 +1980,7 @@ svg:hover {
     padding: 0;
   }
   .services__text--armor {
-    background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/service3-1.jpg);
+    background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%);
     background-size: contain;
     background-position: center;
   }

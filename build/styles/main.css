@@ -1524,8 +1524,8 @@ svg:hover {
 
 .accessories__nav--scroll {
   background-color: #38393d;
-  box-shadow: 0px 7px 20px -7px #fff;
   transition: 0.5s ease;
+  box-shadow: 0px 5px 5px -5px #fafafa, -5px 0px 5px -5px #fafafa, 5px 0px 5px -5px #fafafa;
 }
 
 .accessories__text {
@@ -1930,6 +1930,7 @@ svg:hover {
     opacity: 0;
     transition: opacity 0.3s ease; /* Плавне з'явлення протягом 0.3 секунди */
     pointer-events: none; /* Заборона спрацьовувати події миші на посиланнях, допоки вони приховані */
+    border-radius: 0 0 10px 10px;
   }
   .nav__item:hover .accessories__nav {
     z-index: -1;

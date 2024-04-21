@@ -15,13 +15,6 @@
 
 .top-content__bg {
   z-index: -1;
-  background-image: linear-gradient(
-      90deg,
-      rgba(60, 60, 64, 0.7) 100%,
-      rgba(166, 166, 205, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    ),
-    url(../img/header_bkg1.jpg);
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -30,6 +23,16 @@
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
+}
+
+.top-content--index {
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 60, 64, 0.7) 100%,
+      rgba(166, 166, 205, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    ),
+    url(../img/header_bkg1.jpg);
 }
 
 .top-content__text {
@@ -93,6 +96,12 @@
     width: 50vw;
     font-size: 98px;
   }
+}
+
+.top-content__title__wa {
+  padding: 0;
+
+  margin-top: 25vh;
 }
 
 .top-content__bg--metal {

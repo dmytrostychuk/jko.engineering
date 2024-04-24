@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 55px;
+    top: 56px;
     padding-bottom: 20px;
     opacity: 0;
     transition: opacity 0.3s ease; /* Плавне з'явлення протягом 0.3 секунди */
@@ -28,7 +28,11 @@
 }
 
 .accessories__link {
+  padding: 0 10px;
+  margin: 10px 0;
   img {
+    width: 100%;
+    max-height: 60px;
     opacity: 0.4;
   }
 
@@ -48,6 +52,6 @@
 
 .accessories__text {
   display: block;
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 0 6px;
 }

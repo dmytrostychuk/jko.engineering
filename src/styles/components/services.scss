@@ -128,9 +128,9 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  color: #363839;
   font-weight: 300;
   letter-spacing: 1px;
+  color: #ffffff;
 
   @include mq($from: tablet) {
     margin: 0;
@@ -157,7 +157,7 @@
 .services__text {
   line-height: 1.4em;
   text-align: center;
-  color: #757575;
+  color: #b9b4b4;
 
   @include mq($from: tablet) {
     padding: 10px;

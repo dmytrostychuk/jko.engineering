@@ -5,7 +5,7 @@
   color: #ffffff;
   padding-top: 30px;
   padding-bottom: 50px;
-  border-bottom: 2px solid #308628;
+  box-shadow: 0px 0px 10px -5px rgb(46 255 0);
   // border-top: 1px solid #dadada;
   background-color: #323336;
 }
@@ -18,6 +18,19 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 35px;
+
+  a {
+    transition: 0.25s;
+  }
+
+  a:hover {
+    color: #5bb860;
+    transition: 0.25s;
+  }
+
+  a:active {
+    color: #438346;
+  }
 }
 
 .section__text {

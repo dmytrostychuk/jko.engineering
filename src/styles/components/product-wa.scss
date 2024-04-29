@@ -1,9 +1,21 @@
+.product {
+  color: #b9b9b9;
+}
+
 .product__box {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+
+  @include mq($from: tablet) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include mq($from: tablet-wide) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+  }
 }
 
 .product__card {
@@ -11,21 +23,20 @@
   padding: 10px;
 }
 
-.product__card-container {
-}
-
 .product__img {
   text-align: center;
-  background-color: #4f4f4f;
+  background-color: #ffffff1c;
   padding: 20px 0;
 }
 
 .product__name {
   font-size: 14px;
   line-height: normal;
+  margin: 5px 0;
+  margin-bottom: 40px;
   letter-spacing: 1px;
   word-wrap: break-word;
-  margin: 5px 0;
+
   font-weight: 700;
   color: #d6d6d6;
 }
@@ -50,6 +61,92 @@
   top: 0;
   left: 0;
   &:hover {
-    border: 1px solid rgb(20, 119, 20);
+    border: 1px solid #b9b9b9;
   }
+}
+
+.product__more {
+  margin-top: 40px;
+  text-align: center;
+  grid-column: span 2;
+  @include mq($from: tablet) {
+    grid-column: span 4;
+  }
+  @include mq($from: tablet-wide) {
+    grid-column: span 1;
+    place-items: center;
+    margin-top: 0;
+  }
+}
+
+.product__more-link {
+  position: relative;
+  margin: auto;
+  padding: 11px 22px;
+  transition: all 0.2s ease;
+  @include mq($from: tablet-wide) {
+    padding: 0;
+  }
+}
+.product__more-link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #d6d6d64b;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+
+  @include mq($from: tablet-wide) {
+    top: -10px;
+    left: -10px;
+  }
+}
+.product__more-link span {
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transform: translateX(-10px);
+}
+.product__more-link svg {
+  position: relative;
+  opacity: 0;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #ffffff;
+  stroke-width: 2;
+  transform: translateX(-50px);
+  transition: all 0.3s ease;
+}
+.product__more-link:hover:before {
+  width: 100%;
+  background-color: #5bb860;
+  @include mq($from: tablet-wide) {
+    width: 115%;
+  }
+}
+
+.product__more-link:active:before {
+  background-color: #438346;
+}
+
+.product__more-link:active {
+  color: #ccc9c9;
+}
+.product__more-link:hover svg {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.product__more-link:active {
+  transform: scale(0.96);
 }

@@ -4,8 +4,8 @@ var swiper = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     dynamicBullets: true,
   },
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: false,
+  // },
 });

@@ -1772,6 +1772,14 @@ svg:hover {
   background-size: cover;
 }
 
+.assortment__background--chassis {
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/chassis.jpg);
+}
+
+.assortment__background--accessories {
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/accessories.jpg);
+}
+
 .assortment__wrapper {
   position: absolute;
   width: 100%;
@@ -1841,6 +1849,7 @@ svg:hover {
   color: #000000;
   font-size: 14px;
   transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
 }
 .goods__card:hover {
   -webkit-transform: scale(1.02);
@@ -1854,6 +1863,7 @@ svg:hover {
 .goods__name {
   text-transform: uppercase;
   font-weight: 900;
+  margin-top: 30px;
 }
 
 .goods__code {
@@ -1957,6 +1967,9 @@ svg:hover {
 @media (min-width: 768px) {
   .container {
     padding: 0 30px;
+  }
+  .tablet-none {
+    display: none;
   }
   .button {
     margin-top: 30px;
@@ -2071,6 +2084,13 @@ svg:hover {
   .goods__card {
     width: calc(33.333% - 45px);
   }
+  .goods__img {
+    margin-top: 20px;
+  }
+  .goods__name {
+    margin-top: 30px;
+    font-size: 15px;
+  }
 }
 @media (min-width: 1024px) {
   .container {
@@ -2080,6 +2100,9 @@ svg:hover {
     display: none;
   }
   .mobile-none {
+    display: block;
+  }
+  .tablet-none {
     display: block;
   }
   .none {
@@ -2350,8 +2373,9 @@ svg:hover {
     width: calc(25% - 50px);
   }
   .goods__name {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
+    margin-top: 50px;
   }
   .goods__price {
     font-size: 20px;

@@ -21,6 +21,16 @@
   background-size: cover;
 }
 
+.assortment__background--chassis {
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
+    url(../img/chassis.jpg);
+}
+
+.assortment__background--accessories {
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
+    url(../img/accessories.jpg);
+}
+
 .assortment__wrapper {
   position: absolute;
   width: 100%;

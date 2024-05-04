@@ -19,6 +19,7 @@
   color: #000000;
   font-size: 14px;
   transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
 
   &:hover {
     transform: scale(1.02);
@@ -34,15 +35,26 @@
 
 .goods__img {
   text-align: center;
+
+  @include mq($from: tablet) {
+    margin-top: 20px;
+  }
 }
 
 .goods__name {
   text-transform: uppercase;
   font-weight: 900;
+  margin-top: 30px;
+
+  @include mq($from: tablet) {
+    margin-top: 30px;
+    font-size: 15px;
+  }
 
   @include mq($from: tablet-wide) {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
+    margin-top: 50px;
   }
 }
 

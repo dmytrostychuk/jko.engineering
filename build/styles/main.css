@@ -391,7 +391,6 @@ body {
   font-size: 14px;
   margin: 0;
   background-color: #323336;
-  font-family: "Source Sans Pro", sans-serif;
   color: #ffffff;
 }
 
@@ -448,8 +447,13 @@ svg {
 
 .header__btn_active {
   background-color: rgba(136, 130, 130, 0.3647058824);
-  color: #02970a;
+  color: #5bb860;
   border-radius: 3px;
+}
+
+.menu__btn {
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
 .button {
@@ -464,7 +468,7 @@ svg {
   transition: 0.3s;
 }
 .button:hover {
-  background-color: #1f6223;
+  background-color: #5bb860;
 }
 
 .button__scroll {
@@ -1579,12 +1583,20 @@ svg:hover {
   object-fit: cover;
 }
 
-.swiper-pagination-bullet {
-  background-color: red;
-}
-
 .swiper-pagination .swiper-pagination-bullet {
   background-color: #02970a;
+}
+
+.mySwiper .swiper-slide {
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.mySwiper {
+  margin-top: 10px;
 }
 
 .header-wa {
@@ -1803,6 +1815,7 @@ svg:hover {
 .breadcrumbs__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   list-style: none;
   letter-spacing: 1.5px;
 }
@@ -1826,6 +1839,15 @@ svg:hover {
 .breadcrumbs__item:hover a {
   border-bottom: 2px solid rgba(52, 160, 48, 0.5490196078);
   padding-bottom: 3px;
+}
+
+.breadcrumbs--card {
+  padding-top: 110px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.168627451);
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.8em;
 }
 
 .goods {
@@ -1893,6 +1915,72 @@ svg:hover {
   border: 1px solid #5bb860;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+.card {
+  z-index: 3;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.168627451);
+}
+
+.card__container {
+  max-width: 1200px;
+}
+
+.card__title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3em;
+  text-align: center;
+  margin-top: 0;
+}
+
+.card__gallery {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__text {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.568627451);
+}
+
+.card__price {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+.card__price-tablet {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  margin-top: 15px;
+}
+
+.card__table {
+  font-size: 16px;
+  text-align: start;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  text-align: center;
+}
+.card__table th {
+  font-weight: 500;
+  opacity: 0.8;
+}
+.card__table th,
+.card__table td {
+  text-align: start;
+  padding: 5px;
 }
 @media (min-width: 560px) {
   .container {
@@ -1963,6 +2051,21 @@ svg:hover {
   .assortment {
     height: 40vh;
   }
+  .card__title {
+    font-size: 40px;
+  }
+  .card__text {
+    margin-top: 25px;
+  }
+  .card__price {
+    margin-top: 25px;
+  }
+  .card__table th {
+    padding-right: 50px;
+  }
+  .card__table {
+    margin: 30px auto;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -1971,11 +2074,14 @@ svg:hover {
   .tablet-none {
     display: none;
   }
+  .menu__btn {
+    margin: 0;
+  }
   .button {
     margin-top: 30px;
   }
   .button:hover {
-    background-color: #1f6223;
+    background-color: #5bb860;
   }
   .header__lang {
     margin-left: 30vw;
@@ -2090,6 +2196,37 @@ svg:hover {
   .goods__name {
     margin-top: 30px;
     font-size: 15px;
+  }
+  .card {
+    height: 600px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .card-top,
+  .card-bottom {
+    float: right;
+    width: 43%;
+  }
+  .card__title {
+    text-align: start;
+  }
+  .card__gallery {
+    width: 53%;
+    float: left;
+  }
+  .card__price {
+    text-align: start;
+  }
+  .card__price-camera {
+    display: none;
+  }
+  .card__table th,
+  .card__table td {
+    padding: 7px 20px 7px 0;
+  }
+  .card__table {
+    margin: 0;
+    margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -2369,6 +2506,9 @@ svg:hover {
   .breadcrumbs__item::after {
     margin: 0 10px;
   }
+  .breadcrumbs--card {
+    padding-top: 130px;
+  }
   .goods__card {
     width: calc(25% - 50px);
   }
@@ -2380,6 +2520,15 @@ svg:hover {
   .goods__price {
     font-size: 20px;
     font-weight: 900;
+  }
+  .card__title {
+    font-size: 35px;
+  }
+  .card__gallery {
+    width: 40%;
+  }
+  .card__text {
+    font-size: 18px;
   }
 }
 @media (min-width: 1248px) {

@@ -19,9 +19,17 @@
   object-fit: cover;
 }
 
-.swiper-pagination-bullet {
-  background-color: red;
-}
 .swiper-pagination .swiper-pagination-bullet {
   background-color: #02970a;
+}
+.mySwiper .swiper-slide {
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.mySwiper {
+  margin-top: 10px;
 }

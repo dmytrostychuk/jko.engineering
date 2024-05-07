@@ -20,8 +20,17 @@
 
 .header__btn_active {
   background-color: #8882825d;
-  color: #02970a;
+  color: #5bb860;
   border-radius: 3px;
+}
+
+.menu__btn {
+  margin: 0 auto;
+  margin-top: 25px;
+
+  @include mq($from: tablet) {
+    margin: 0;
+  }
 }
 
 .button {
@@ -36,7 +45,7 @@
   transition: 0.3s;
 
   &:hover {
-    background-color: #1f6223;
+    background-color: #5bb860;
   }
 
   @include mq($from: phablet) {
@@ -47,7 +56,7 @@
     margin-top: 30px;
 
     &:hover {
-      background-color: #1f6223;
+      background-color: #5bb860;
     }
   }
 }

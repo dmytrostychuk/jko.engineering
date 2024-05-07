@@ -6,6 +6,7 @@
 .breadcrumbs__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   list-style: none;
   letter-spacing: 1.5px;
 
@@ -35,5 +36,17 @@
   &:hover a {
     border-bottom: 2px solid #34a0308c;
     padding-bottom: 3px;
+  }
+}
+
+.breadcrumbs--card {
+  padding-top: 110px;
+  padding-bottom: 20px;
+  background-color: #ffffff2b;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.8em;
+  @include mq($from: tablet-wide) {
+    padding-top: 130px;
   }
 }

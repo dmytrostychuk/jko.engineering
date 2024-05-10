@@ -29,6 +29,7 @@
   margin-top: 25px;
 
   @include mq($from: tablet) {
+    width: 40%;
     margin: 0;
   }
 }

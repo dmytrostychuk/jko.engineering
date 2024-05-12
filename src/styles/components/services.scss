@@ -10,16 +10,18 @@
   margin-top: 50px;
 
   @include mq($from: tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  @include mq($from: desktop) {
+    height: 800px;
+    grid-column-gap: 50px;
   }
 }
 
 .services__cards-inner {
-  @include mq($from: tablet) {
-    width: 48%;
-  }
+  height: 100%;
 }
 
 .services__card {
@@ -39,20 +41,28 @@
 
   @include mq($from: tablet) {
     width: 100%;
+
     margin: 5px;
     border-bottom: none;
+    margin-bottom: 20px;
   }
 
   @include mq($from: tablet-wide) {
+    margin-bottom: 10px;
     &:hover {
       box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 1);
     }
   }
+
+  @include mq($from: desktop) {
+    height: 40%;
+    margin-bottom: 15px;
+  }
 }
 
 .services__card-vertical {
-  @include mq($from: tablet) {
-    width: 50%;
+  @include mq($from: desktop) {
+    height: calc(80% + 18px);
   }
 }
 
@@ -94,6 +104,7 @@
 }
 
 .services__hover-block {
+  position: relative;
   padding-top: 0px;
 
   @include mq($from: tablet) {
@@ -128,7 +139,6 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 300;
   letter-spacing: 1px;
   color: #ffffff;
 
@@ -144,22 +154,29 @@
     width: 100%;
     color: #ffffff;
     padding: 20px 0;
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    padding-top: 100px;
   }
 
   @include mq($from: desktop) {
-    font-size: 24px;
+    font-size: 30px;
     padding: 15px 0;
+    padding-top: 100px;
   }
 }
 
 .services__text {
-  line-height: 1.4em;
+  line-height: 2em;
   text-align: center;
   color: #b9b4b4;
 
   @include mq($from: tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
     padding: 10px;
     margin-top: 0;
     color: #fff;
@@ -169,7 +186,8 @@
     position: absolute;
     bottom: 100%;
     left: 0;
-    width: 100%;
+    top: auto;
+    transform: translate(0);
     height: 100%;
     color: #fff;
     padding: 0px;

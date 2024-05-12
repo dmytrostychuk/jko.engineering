@@ -425,7 +425,7 @@ ul {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 0 20px;
 }
 
@@ -607,7 +607,7 @@ svg {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1300px;
   transition: 1s ease-in-out;
 }
 
@@ -1086,7 +1086,7 @@ svg:hover {
 
 .top-content__container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
   background-attachment: fixed;
 }
 
@@ -1151,6 +1151,10 @@ svg:hover {
   margin-top: 50px;
 }
 
+.services__cards-inner {
+  height: 100%;
+}
+
 .services__card {
   position: relative;
   margin: 0 auto;
@@ -1186,6 +1190,7 @@ svg:hover {
 }
 
 .services__hover-block {
+  position: relative;
   padding-top: 0px;
 }
 
@@ -1194,13 +1199,12 @@ svg:hover {
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 300;
   letter-spacing: 1px;
   color: #ffffff;
 }
 
 .services__text {
-  line-height: 1.4em;
+  line-height: 2em;
   text-align: center;
   color: #b9b4b4;
 }
@@ -1260,10 +1264,14 @@ svg:hover {
 
 .footer {
   z-index: 1;
-  background-color: #323336;
+  background-color: #292b2c;
   padding: 30px 0;
   color: #ffffff;
   font-size: 14px;
+}
+
+.footer__container {
+  padding: 0 20px;
 }
 
 .footer__block {
@@ -1355,12 +1363,13 @@ svg:hover {
 }
 
 .footer__copyright {
+  max-width: 2000px;
   display: flex;
   position: relative;
   padding: 20px;
   padding-bottom: 0;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .footer__flag {
@@ -2027,12 +2036,13 @@ svg:hover {
   }
   .footer__container {
     display: flex;
-    align-items: baseline;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: column;
   }
   .footer__block {
     margin: 0 10px;
+    margin-bottom: 40px;
   }
   .footer__logo {
     padding-bottom: 40px;
@@ -2123,20 +2133,15 @@ svg:hover {
     font-weight: 600;
   }
   .services__card-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .services__cards-inner {
-    width: 48%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
   }
   .services__card {
     width: 100%;
     margin: 5px;
     border-bottom: none;
-  }
-  .services__card-vertical {
-    width: 50%;
+    margin-bottom: 20px;
   }
   .services__img {
     height: 100%;
@@ -2160,16 +2165,24 @@ svg:hover {
     color: #ffffff;
   }
   .services__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     padding: 10px;
     margin-top: 0;
     color: #fff;
   }
   .footer__container {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1700px;
+    flex-direction: row;
   }
   .footer__logo {
     width: auto;
+    padding-bottom: 0;
   }
   .communication {
     display: flex;
@@ -2405,6 +2418,9 @@ svg:hover {
     width: 700px;
     font-size: 6vw;
   }
+  .services__card {
+    margin-bottom: 10px;
+  }
   .services__card:hover {
     box-shadow: 0px 0px 9px 0px rgb(255, 255, 255);
   }
@@ -2423,14 +2439,17 @@ svg:hover {
     width: 100%;
     color: #ffffff;
     padding: 20px 0;
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    padding-top: 100px;
   }
   .services__text {
     position: absolute;
     bottom: 100%;
     left: 0;
-    width: 100%;
+    top: auto;
+    -webkit-transform: translate(0);
+            transform: translate(0);
     height: 100%;
     color: #fff;
     padding: 0px;
@@ -2455,6 +2474,11 @@ svg:hover {
   }
   .footer__container {
     justify-content: space-between;
+    padding: 0 50px;
+  }
+  .footer__block {
+    margin: 0 10px;
+    margin-bottom: 0;
   }
   .footer__flag {
     left: 40px;
@@ -2585,9 +2609,21 @@ svg:hover {
     width: 50vw;
     font-size: 98px;
   }
+  .services__card-box {
+    height: 800px;
+    grid-column-gap: 50px;
+  }
+  .services__card {
+    height: 40%;
+    margin-bottom: 15px;
+  }
+  .services__card-vertical {
+    height: calc(80% + 18px);
+  }
   .services__title {
-    font-size: 24px;
+    font-size: 30px;
     padding: 15px 0;
+    padding-top: 100px;
   }
   .services__text {
     bottom: 100%;

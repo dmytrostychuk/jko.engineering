@@ -1,26 +1,29 @@
 .footer {
   z-index: 1;
-  background-color: #323336;
+  background-color: #292b2c;
   padding: 30px 0;
   color: #ffffff;
   font-size: 14px;
 }
 
 .footer__container {
+  padding: 0 20px;
   @include mq($from: phablet) {
     display: flex;
-    align-items: baseline;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: column;
   }
 
   @include mq($from: tablet) {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1700px;
+    flex-direction: row;
   }
 
   @include mq($from: tablet-wide) {
     justify-content: space-between;
+    padding: 0 50px;
   }
 }
 
@@ -29,6 +32,11 @@
 
   @include mq($from: phablet) {
     margin: 0 10px;
+    margin-bottom: 40px;
+  }
+  @include mq($from: tablet-wide) {
+    margin: 0 10px;
+    margin-bottom: 0;
   }
 }
 
@@ -39,6 +47,7 @@
 
   @include mq($from: tablet) {
     width: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -139,12 +148,13 @@
 }
 
 .footer__copyright {
+  max-width: 2000px;
   display: flex;
   position: relative;
   padding: 20px;
   padding-bottom: 0;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 0;
   @include mq($from: phablet) {
     display: block;
   }

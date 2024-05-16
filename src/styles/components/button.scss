@@ -38,15 +38,17 @@
   font-size: 18px;
   text-align: center;
   padding: 15px 37px 15px 37px;
-  background-color: #323336;
+  background-color: #dadada;
   border: none;
   border-radius: 2px;
-  color: #ffffff;
+  color: #333333;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 600;
 
   &:hover {
     background-color: #5bb860;
+    color: #fff;
   }
 
   @include mq($from: phablet) {

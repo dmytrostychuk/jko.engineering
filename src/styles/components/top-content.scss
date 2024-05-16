@@ -5,6 +5,7 @@
   height: 100vh;
   top: 0;
   background-attachment: fixed;
+  background-color: #090909;
 }
 
 .top-content__container {
@@ -33,6 +34,49 @@
       rgba(0, 212, 255, 1) 100%
     ),
     url(../img/header_bkg2.jpg);
+}
+
+.top-content--index-1 {
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 60, 64, 0.7) 100%,
+      rgba(166, 166, 205, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    ),
+    url(../img/service2.jpg);
+}
+
+.top-content--index-2 {
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 60, 64, 0.7) 100%,
+      rgba(166, 166, 205, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    ),
+    url(../img/service1.jpg);
+}
+
+.top-content--index-3 {
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 60, 64, 0.7) 100%,
+      rgba(166, 166, 205, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    ),
+    url(../img/service3.jpg);
+  background-size: contain;
+  background-color: #090909;
+  background-repeat: no-repeat;
+}
+
+.top-content--index-4 {
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 60, 64, 0.7) 100%,
+      rgba(166, 166, 205, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    ),
+    url(../img/service1.1.jpg);
 }
 
 .top-content__text {

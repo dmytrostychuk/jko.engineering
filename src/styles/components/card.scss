@@ -3,7 +3,7 @@
   position: relative;
   padding-top: 10px;
   padding-bottom: 60px;
-  background-color: #ffffff2b;
+  background-color: rgba(50, 51, 54, 0.8);
 
   @include mq($from: tablet) {
     height: 600px;
@@ -24,12 +24,25 @@
   }
 }
 
+.card__article {
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+  color: #dedede;
+
+  @include mq($from: tablet) {
+    text-align: start;
+    margin-bottom: 30px;
+  }
+}
+
 .card__title {
   font-size: 26px;
   font-weight: 600;
   line-height: 1.3em;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 0;
 
   @include mq($from: phablet) {
     font-size: 40px;
@@ -133,6 +146,6 @@
   }
   @include mq($from: tablet) {
     margin: 0;
-    margin-top: 20px;
+    margin-top: 0px;
   }
 }

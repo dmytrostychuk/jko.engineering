@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"
     rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -212,11 +212,52 @@
     </div>
   </header>
   <main class="main">
-    <section class="top-content rellax" data-rellax-speed="-10">
-      <div class="top-content__bg top-content--index">
-      </div>
-      <div class="top-content__text">
-        <h3 class=" top-content__title ">Не попробуєш, не взнаєш</h3>
+    <section class="header-wa">
+      <div class="swiper mySwiper3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide top-content rellax" data-rellax-speed="-10">
+            <div class="top-content__bg top-content--index">
+            </div>
+            <div class="top-content__wrapper">
+              <div class="top-content__text top-content__text--wa">
+                <h3 class="top-content__title  top-content__title__wa">Не попробуєш не взнаєш</h3>
+                <p class="top-content__title header-wa__text">Тут коротка інфрмація про цей виріб</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide top-content rellax" data-rellax-speed="-10">
+            <div class="top-content__bg top-content--index-1">
+            </div>
+            <div class="top-content__wrapper">
+              <div class="top-content__text top-content__text--wa">
+                <h3 class="top-content__title  top-content__title__wa">Точимо втулки</h3>
+                <p class="top-content__title header-wa__text">Тут коротка інфрмація про цей виріб</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide top-content rellax" data-rellax-speed="-10">
+            <div class="top-content__bg top-content--index-2">
+            </div>
+            <div class="top-content__wrapper">
+              <div class="top-content__text top-content__text--wa">
+                <h3 class="top-content__title  top-content__title__wa">Кресленння мангалів</h3>
+                <p class="top-content__title header-wa__text">Тут коротка інфрмація про цей виріб</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide top-content rellax" data-rellax-speed="-10">
+            <div class="top-content__bg top-content--index-3">
+            </div>
+            <div class="top-content__wrapper">
+              <div class="top-content__text top-content__text--wa">
+                <h3 class="top-content__title  top-content__title__wa">Збройові аксесуари</h3>
+                <p class="top-content__title header-wa__text">Тут коротка інфрмація про цей виріб</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <section class="section section--bcg">
@@ -355,12 +396,14 @@
     </div>
   </div>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
   <script>
     var rellax = new Rellax('.rellax');
   </script>
   <script src="js/index.js"></script>
   <script src="js/lang.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 
 </html>

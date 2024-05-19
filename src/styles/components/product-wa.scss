@@ -28,14 +28,24 @@
 
   &:hover .product__img,
   &:hover .product__content {
-    background-color: #ffffff2d;
+    background-color: rgba(255, 255, 255, 0.116);
     transition: all 0.3s ease;
+  }
+
+  &:hover .product__name {
+    color: #eaeaea;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .product__code {
+    transition: all 0.3s ease;
+    color: #eaeaeac7;
   }
 }
 
 .product__img {
   text-align: center;
-  background-color: #ffffff1c;
+  background-color: #dddddd;
   padding: 10px 0;
   border-radius: 10% 10% 0 0;
   transition: all 0.3s ease;
@@ -51,7 +61,7 @@
   padding: 10px;
   height: 100%;
   margin-top: 5px;
-  background-color: rgba(255, 255, 255, 0.1098039216);
+  background-color: #dddddd;
   border-radius: 0 0 10% 10%;
   transition: all 0.3s ease;
   text-align: center;
@@ -65,7 +75,8 @@
   letter-spacing: 1px;
   word-wrap: break-word;
   font-weight: 700;
-  color: #d6d6d6;
+  transition: all 0.3s ease;
+  color: #000;
 
   @include mq($from: tablet-wide) {
     font-size: 18px;
@@ -74,15 +85,18 @@
 }
 
 .product__code {
-  color: #b9b9b9;
+  color: #57585a;
   font-size: 12px;
+
+  transition: all 0.3s ease;
 }
 
 .product__price {
-  color: #ffffff;
+  color: #5bb860;
   font-size: 14px;
   font-weight: 700;
   margin: 0;
+  letter-spacing: 1.5px;
 
   @include mq($from: tablet-wide) {
     font-size: 18px;

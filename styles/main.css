@@ -408,19 +408,26 @@ ul {
 }
 
 .main--bg {
-  z-index: -1;
   position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+}
+.main--bg img {
   width: 100%;
-  height: 100%;
-  margin-top: 55px;
-  top: 0;
-  left: 0;
+}
+
+.main--bg-index {
+  background: url(../img/back-line.svg) center center;
+  width: 100%;
+  height: 100vh;
   position: fixed;
-  background-color: #090909;
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, #a6a6cd 100%, #00d4ff 100%), url(../img/service3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  bottom: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: all 0.35s ease-out;
 }
 
 .container {
@@ -1166,7 +1173,6 @@ svg:hover {
 .services {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eeeeee;
 }
 
 .services__card-box {
@@ -1246,7 +1252,7 @@ svg:hover {
   color: #ffffff;
   padding-top: 30px;
   padding-bottom: 50px;
-  background-color: #323336;
+  background-color: rgba(105, 105, 105, 0.116);
 }
 
 .section__title {
@@ -1278,10 +1284,6 @@ svg:hover {
 
 .section--center-text {
   text-align: center;
-}
-
-.section--bg {
-  background-color: #ffffff;
 }
 
 .footer {
@@ -1590,7 +1592,6 @@ svg:hover {
 }
 .accessories__link img {
   width: 100%;
-  max-height: 60px;
   opacity: 0.4;
 }
 .accessories__link:hover img {
@@ -1699,18 +1700,11 @@ svg:hover {
 .product__card {
   position: relative;
   padding: 10px;
+  width: 100%;
 }
 .product__card:hover .product__img, .product__card:hover .product__content {
-  background-color: rgba(255, 255, 255, 0.116);
+  background-color: #f6f6f6;
   transition: all 0.3s ease;
-}
-.product__card:hover .product__name {
-  color: #eaeaea;
-  transition: all 0.3s ease;
-}
-.product__card:hover .product__code {
-  transition: all 0.3s ease;
-  color: rgba(234, 234, 234, 0.7803921569);
 }
 
 .product__img {
@@ -1719,13 +1713,23 @@ svg:hover {
   padding: 10px 0;
   border-radius: 10% 10% 0 0;
   transition: all 0.3s ease;
+  max-width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
 }
 .product__img img {
   width: 100%;
+  align-items: center;
 }
+
 .product__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
-  height: 100%;
+  height: 135px;
+  justify-content: center;
   margin-top: 5px;
   background-color: #dddddd;
   border-radius: 0 0 10% 10%;
@@ -1737,7 +1741,6 @@ svg:hover {
   font-size: 14px;
   line-height: normal;
   margin: 5px 0;
-  margin-bottom: 20px;
   letter-spacing: 1px;
   word-wrap: break-word;
   font-weight: 700;
@@ -1766,12 +1769,11 @@ svg:hover {
   height: 100%;
   top: 0;
   left: 0;
-  box-shadow: rgba(255, 255, 255, 0.466) 0px 2px 5px -1px, rgba(255, 255, 255, 0.541) 0px 1px 3px -1px;
   border-radius: 5%;
   transition: all 0.3s ease;
 }
 .product__link:hover {
-  box-shadow: rgba(51, 167, 56, 0.493) 0px 6px 22px -2px, rgba(51, 167, 56, 0.493) 0px 3px 7px -3px;
+  box-shadow: 0 0 9px 0 #fff;
   transition: all 0.3s ease;
 }
 
@@ -1926,77 +1928,10 @@ svg:hover {
 .breadcrumbs--card {
   padding-top: 110px;
   padding-bottom: 20px;
-  background-color: rgba(24, 24, 24, 0.8);
+  background-color: rgba(74, 74, 74, 0.94);
   margin-bottom: 0;
   margin-top: 0;
   line-height: 1.8em;
-}
-
-.goods {
-  color: #000000;
-}
-
-.goods__box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 10px;
-  justify-content: space-around;
-}
-
-.goods__card {
-  position: relative;
-  padding: 15px;
-  width: calc(40% - 10px);
-  background-color: #f6f6f6;
-  border-radius: 10px;
-  text-align: start;
-  color: #000000;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  font-family: "Montserrat", sans-serif;
-}
-.goods__card:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-
-.goods__img {
-  text-align: center;
-}
-
-.goods__name {
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-top: 30px;
-}
-
-.goods__code {
-  margin-top: 30px;
-  color: #57585a;
-}
-
-.goods__price {
-  font-weight: 900;
-  font-size: 16px;
-  color: #5bb860;
-}
-
-.goods__link {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -5px;
-  left: -5px;
-  padding: 5px;
-  border-radius: 10px;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-.goods__link:hover {
-  border: 1px solid #5bb860;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
 }
 
 .card {
@@ -2011,10 +1946,20 @@ svg:hover {
   max-width: 1200px;
 }
 
+.card-top {
+  padding: 15px 0;
+}
+
+.card-bottom {
+  background-color: rgba(0, 0, 0, 0.2588235294);
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+
 .card__article {
   text-align: center;
   letter-spacing: 1.5px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   color: #dedede;
 }
 
@@ -2027,9 +1972,14 @@ svg:hover {
   margin-bottom: 0;
 }
 
+.card__gallery--wrapper {
+  width: 100%;
+}
+
 .card__gallery {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .card__text {
@@ -2043,10 +1993,7 @@ svg:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 20px;
-  padding: 20px 0;
-  border-top: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
+  padding-top: 20px;
 }
 
 .card__price-tablet {
@@ -2054,18 +2001,22 @@ svg:hover {
   font-weight: 600;
   letter-spacing: 1.3px;
   margin-top: 15px;
+  color: #6dcf72;
 }
 
 .card__table {
   font-size: 16px;
   text-align: start;
   letter-spacing: 1px;
-  margin-top: 30px;
+  margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
+  border-bottom: 1px solid #dedede;
+  color: #ffffff;
 }
 .card__table th {
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 1;
 }
 .card__table th,
 .card__table td {
@@ -2139,6 +2090,15 @@ svg:hover {
     letter-spacing: 4px;
     line-height: 1.5em;
   }
+  .product__img {
+    height: 230px;
+  }
+  .product__name {
+    font-size: 16px;
+  }
+  .product__price {
+    font-size: 20px;
+  }
   .assortment {
     height: 40vh;
   }
@@ -2155,7 +2115,7 @@ svg:hover {
     padding-right: 50px;
   }
   .card__table {
-    margin: 30px auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 768px) {
@@ -2166,7 +2126,7 @@ svg:hover {
     display: none;
   }
   .menu__btn {
-    width: 40%;
+    width: 60%;
     margin: 0;
   }
   .button {
@@ -2276,41 +2236,46 @@ svg:hover {
   .product__box {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .product__img {
+    height: 200px;
+  }
+  .product__price {
+    font-size: 16px;
+  }
   .product__more {
     grid-column: span 4;
   }
   .assortment__wrapper {
     bottom: 50px;
   }
-  .goods__card {
-    width: calc(33.333% - 45px);
-  }
-  .goods__img {
-    margin-top: 20px;
-  }
-  .goods__name {
-    margin-top: 30px;
-    font-size: 15px;
-  }
   .card {
-    height: 600px;
+    height: 700px;
     padding-top: 70px;
     padding-bottom: 50px;
   }
   .card-top,
   .card-bottom {
     float: right;
-    width: 43%;
+    width: 50%;
+    padding: 10px 15px;
+  }
+  .card-top {
+    background-color: rgba(0, 0, 0, 0.2588235294);
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-bottom: 10px;
+  }
+  .card-bottom {
+    padding: 20px 15px;
   }
   .card__article {
     text-align: start;
-    margin-bottom: 30px;
   }
   .card__title {
     text-align: start;
   }
   .card__gallery {
-    width: 53%;
+    width: 43%;
     float: left;
   }
   .card__price {
@@ -2347,6 +2312,9 @@ svg:hover {
   .header__btn {
     margin-bottom: 0px;
     margin-left: 0px;
+  }
+  .menu__btn {
+    width: 50%;
   }
   .header {
     background-color: rgba(50, 51, 54, 0);
@@ -2629,23 +2597,17 @@ svg:hover {
   .breadcrumbs--card {
     padding-top: 130px;
   }
-  .goods__card {
-    width: calc(25% - 50px);
-  }
-  .goods__name {
-    font-size: 15px;
-    font-weight: 700;
-    margin-top: 50px;
-  }
-  .goods__price {
-    font-size: 20px;
-    font-weight: 900;
+  .card-top,
+  .card-bottom {
+    float: right;
+    width: 55%;
   }
   .card__title {
     font-size: 35px;
   }
   .card__gallery {
-    width: 40%;
+    width: 35%;
+    padding: 0 30px;
   }
   .card__text {
     font-size: 18px;
@@ -2720,5 +2682,12 @@ svg:hover {
   }
   .top-content__text--wa {
     margin: 0 auto;
+  }
+  .product__card {
+    min-width: 230px;
+    max-width: 320px;
+  }
+  .product__img {
+    height: 260px;
   }
 }

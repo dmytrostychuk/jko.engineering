@@ -6,7 +6,7 @@
   background-color: rgba(50, 51, 54, 0.8);
 
   @include mq($from: tablet) {
-    height: 600px;
+    height: 700px;
     padding-top: 70px;
     padding-bottom: 50px;
   }
@@ -20,19 +20,43 @@
 .card-bottom {
   @include mq($from: tablet) {
     float: right;
-    width: 43%;
+    width: 50%;
+    padding: 10px 15px;
+  }
+
+  @include mq($from: tablet-wide) {
+    float: right;
+    width: 55%;
+  }
+}
+
+.card-top {
+  padding: 15px 0;
+  @include mq($from: tablet) {
+    background-color: #00000042;
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.card-bottom {
+  background-color: #00000042;
+  border-radius: 10px;
+  padding: 15px 10px;
+  @include mq($from: tablet) {
+    padding: 20px 15px;
   }
 }
 
 .card__article {
   text-align: center;
   letter-spacing: 1.5px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   color: #dedede;
 
   @include mq($from: tablet) {
     text-align: start;
-    margin-bottom: 30px;
   }
 }
 
@@ -56,17 +80,23 @@
   }
 }
 
+.card__gallery--wrapper {
+  width: 100%;
+}
+
 .card__gallery {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  margin-bottom: 20px;
 
   @include mq($from: tablet) {
-    width: 53%;
+    width: 43%;
     float: left;
   }
 
   @include mq($from: tablet-wide) {
-    width: 40%;
+    width: 35%;
+    padding: 0 30px;
   }
 }
 
@@ -89,10 +119,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 20px;
-  padding: 20px 0;
-  border-top: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
+  padding-top: 20px;
 
   @include mq($from: phablet) {
     margin-top: 25px;
@@ -108,6 +135,7 @@
   font-weight: 600;
   letter-spacing: 1.3px;
   margin-top: 15px;
+  color: #6dcf72;
 }
 
 .card__price-camera {
@@ -120,12 +148,15 @@
   font-size: 16px;
   text-align: start;
   letter-spacing: 1px;
-  margin-top: 30px;
+  margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
+  border-bottom: 1px solid #dedede;
+  color: #ffffff;
 
   th {
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 1;
     @include mq($from: phablet) {
       padding-right: 50px;
     }
@@ -142,7 +173,7 @@
   }
 
   @include mq($from: phablet) {
-    margin: 30px auto;
+    margin: 0 auto;
   }
   @include mq($from: tablet) {
     margin: 0;

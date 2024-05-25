@@ -29,8 +29,12 @@
   margin-top: 25px;
 
   @include mq($from: tablet) {
-    width: 40%;
+    width: 60%;
     margin: 0;
+  }
+
+  @include mq($from: tablet-wide) {
+    width: 50%;
   }
 }
 

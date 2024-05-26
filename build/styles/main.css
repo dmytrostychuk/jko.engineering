@@ -409,17 +409,19 @@ ul {
 
 .main--bg {
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 4;
+  z-index: -1;
+  opacity: 0.2;
 }
 .main--bg img {
-  width: 100%;
+  width: 60vh;
 }
 
 .main--bg-index {
+  z-index: -2;
   background: url(../img/back-line.svg) center center;
   width: 100%;
   height: 100vh;
@@ -548,6 +550,14 @@ svg {
           transform: rotate(45deg);
 }
 
+.btn__container {
+  text-align: center;
+}
+
+.btn-form {
+  margin-top: 0;
+}
+
 .header {
   z-index: 10;
   position: fixed;
@@ -635,53 +645,6 @@ svg {
 
 .header__top {
   background-color: #292b2c;
-}
-
-.button-slip {
-  position: relative;
-  max-width: 320px;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 25px;
-}
-
-.button-slip__link {
-  background-color: inherit;
-  border: none;
-  color: #000000;
-  cursor: pointer;
-}
-.button-slip__link:hover .button-slip__link-text {
-  left: 30px;
-}
-.button-slip__link:hover .button-slip__link-box {
-  background-color: #5bb860;
-}
-
-.button-slip__link-text {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  left: 0;
-  text-align: start;
-  transition: left 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 50px;
-  color: #ffffff;
-}
-
-.button-slip__link-span {
-  border-bottom: 3px solid #ffffff;
-}
-
-.button-slip__link-box {
-  margin-left: 60px;
-  height: 200px;
-  width: 200px;
-  background: rgba(255, 171, 157, 0.5);
-  transition: background 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 
 .link-hover {
@@ -1113,57 +1076,52 @@ svg:hover {
 }
 
 .top-content--index {
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/header_bkg2.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/header_bkg2.jpg);
 }
 
 .top-content--index-1 {
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/service2.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/service2.jpg);
 }
 
 .top-content--index-2 {
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/service1.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/service1.jpg);
 }
 
 .top-content--index-3 {
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/service3.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/strage-armore.png);
   background-size: contain;
   background-color: #090909;
   background-repeat: no-repeat;
 }
 
 .top-content--index-4 {
-  background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/service1.1.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/service1.1.jpg);
 }
 
 .top-content__text {
-  background-attachment: fixed;
-  transition: 0.6s ease-in-out;
-  color: #ffffff;
-  padding: 0 20px;
+  margin-top: 80vh;
+  background-color: rgba(0, 0, 0, 0.2666666667);
+}
+
+.top-content__wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.top-content--container {
   max-width: 1700px;
   margin: 0 auto;
 }
-.top-content__text:hover {
-  transition: 0.6s ease-in-out;
-}
-.top-content__text:hover svg {
-  transition: 0.6s ease-in-out;
-  fill: #e74a51;
-}
-
-.top-content__title {
-  position: relative;
-  text-transform: uppercase;
-  font-size: 12vw;
-  margin: 0;
-  font-weight: 600;
-  color: #ffffff;
-  padding-top: 25vh;
-}
 
 .top-content__title__wa {
-  padding: 0;
-  margin-top: 25vh;
+  text-align: start;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 20px;
+  letter-spacing: 5px;
+  line-height: 1.5em;
 }
 
 .top-content__bg--metal {
@@ -1173,10 +1131,6 @@ svg:hover {
 .services {
   padding-top: 40px;
   padding-bottom: 40px;
-}
-
-.services__card-box {
-  margin-top: 50px;
 }
 
 .services__cards-inner {
@@ -1246,12 +1200,16 @@ svg:hover {
   height: 100%;
 }
 
+.services__img-vertical {
+  background-color: rgba(0, 0, 0, 0.6784313725);
+}
+
 .section {
   z-index: 100;
   margin-bottom: 0;
   color: #ffffff;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   background-color: rgba(105, 105, 105, 0.116);
 }
 
@@ -1280,6 +1238,10 @@ svg:hover {
   line-height: 1.5em;
   word-spacing: 0.6em;
   margin-bottom: 20px;
+}
+
+.section__text--size {
+  font-size: 18px;
 }
 
 .section--center-text {
@@ -1418,6 +1380,9 @@ svg:hover {
   font-weight: 400;
   color: #ffffff;
   margin-top: 0;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 0;
 }
 
 .modal {
@@ -1664,28 +1629,8 @@ svg:hover {
   background-image: linear-gradient(90deg, rgba(60, 60, 64, 0.7) 100%, rgb(166, 166, 205) 100%, rgb(0, 212, 255) 100%), url(../img/wa_3.jpg);
 }
 
-.header-wa__text {
-  font-size: 18px;
-  padding-top: 30px;
-  letter-spacing: 4px;
-  line-height: 1.5em;
-  font-size: 3vw;
-  margin-top: 0;
-}
-
-.top-content__text--wa {
-  margin: 0;
-  padding: 0;
-}
-
-.top-content__wrapper {
-  padding-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.2666666667);
-}
-
 .product {
   color: #b9b9b9;
-  background-color: rgba(50, 51, 54, 0.7960784314);
 }
 
 .product__box {
@@ -2037,12 +1982,6 @@ svg:hover {
   .header__lang {
     flex-direction: row;
   }
-  .top-content__title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 9vw;
-    letter-spacing: 4px;
-    line-height: 1.5em;
-  }
   .services__card {
     width: 60vw;
     margin: 0 auto;
@@ -2071,11 +2010,6 @@ svg:hover {
     position: absolute;
     left: 20px;
   }
-  .communication {
-    width: 60vw;
-    margin: 0 auto;
-    margin-top: 30px;
-  }
   .modal__text {
     padding: 0 30px;
   }
@@ -2084,11 +2018,6 @@ svg:hover {
   }
   .gallery__card {
     max-height: 200px;
-  }
-  .header-wa__text {
-    font-size: 18px;
-    letter-spacing: 4px;
-    line-height: 1.5em;
   }
   .product__img {
     height: 230px;
@@ -2135,6 +2064,11 @@ svg:hover {
   .button:hover {
     background-color: #5bb860;
   }
+  .btn-form {
+    margin-top: 0;
+    width: 100%;
+    margin-left: 20px;
+  }
   .header__lang {
     margin-left: 30vw;
   }
@@ -2147,13 +2081,8 @@ svg:hover {
   .nav__list-social li {
     font-size: 18px;
   }
-  .top-content__text {
-    padding: 0 30px;
-  }
-  .top-content__title {
-    width: 480px;
-    font-size: 8vw;
-    font-weight: 600;
+  .top-content__title__wa {
+    font-size: 16px;
   }
   .services__card-box {
     display: grid;
@@ -2210,6 +2139,7 @@ svg:hover {
   .communication {
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
   .modal__inner {
     position: absolute;
@@ -2226,12 +2156,6 @@ svg:hover {
   }
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .header-wa__text {
-    text-align: center;
-    width: 450px;
-    font-size: 20px;
-    font-weight: 600;
   }
   .product__box {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2315,6 +2239,10 @@ svg:hover {
   }
   .menu__btn {
     width: 50%;
+  }
+  .btn-form {
+    margin-top: 0;
+    width: 100%;
   }
   .header {
     background-color: rgba(50, 51, 54, 0);
@@ -2446,12 +2374,8 @@ svg:hover {
   .nav__list-social img {
     height: 30px;
   }
-  .top-content__text {
-    padding: 0 40px;
-  }
-  .top-content__title {
-    width: 700px;
-    font-size: 6vw;
+  .top-content__title__wa {
+    font-size: 18px;
   }
   .services__card {
     margin-bottom: 10px;
@@ -2519,10 +2443,7 @@ svg:hover {
     left: 40px;
   }
   .communication__title {
-    margin-right: 40px;
-    padding-left: 10vw;
     font-size: 22px;
-    width: 500px;
   }
   .top-content__title--draw {
     width: 90vw;
@@ -2549,10 +2470,6 @@ svg:hover {
     opacity: 1;
     transition: 0.5s ease;
     pointer-events: auto;
-  }
-  .header-wa__text {
-    width: 700px;
-    font-size: 2vw;
   }
   .product__box {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2641,16 +2558,12 @@ svg:hover {
     height: 90 0px;
     justify-content: center;
   }
-  .top-content__text {
-    padding: 0 50px;
-  }
-  .top-content__title {
-    width: 50vw;
-    font-size: 98px;
-  }
   .services__card-box {
     height: 800px;
     grid-column-gap: 50px;
+  }
+  .services__cards-inner {
+    padding: 0 35px;
   }
   .services__card {
     height: 40%;
@@ -2669,19 +2582,19 @@ svg:hover {
     padding-top: 100px;
     font-size: 18px;
   }
+  .footer__logo {
+    width: 350px;
+    padding-bottom: 0;
+  }
   .footer__flag {
     left: 50px;
+  }
+  .communication {
+    padding-bottom: 30px;
   }
   .top-content__title--draw {
     width: 90vw;
     font-size: 98px;
-  }
-  .header-wa__text {
-    width: 50vw;
-    font-size: 20px;
-  }
-  .top-content__text--wa {
-    margin: 0 auto;
   }
   .product__card {
     min-width: 230px;

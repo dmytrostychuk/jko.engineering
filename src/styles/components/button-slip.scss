@@ -1,48 +1,54 @@
-.button-slip {
-  position: relative;
-  max-width: 320px;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 25px;
-}
+// .btn-flip {
+//   opacity: 1;
+//   outline: 0;
+//   color: #fff;
+//   line-height: 40px;
+//   position: relative;
+//   text-align: center;
+//   letter-spacing: 1px;
+//   display: inline-block;
+//   text-decoration: none;
+//   font-family: 'Open Sans';
+//   text-transform: uppercase;
 
-.button-slip__link {
-  background-color: inherit;
-  border: none;
-  color: #000000;
-  cursor: pointer;
-  &:hover .button-slip__link-text {
-    left: 30px;
-  }
+//   &:hover {
+//     &:after {
+//       opacity: 1;
+//       transform: translateY(0) rotateX(0);
+//     }
 
-  &:hover .button-slip__link-box {
-    background-color: #5bb860;
-  }
-}
+//     &:before {
+//       opacity: 0;
+//       transform: translateY(50%) rotateX(90deg);
+//     }
+//   }
 
-.button-slip__link-text {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 0;
-  text-align: start;
-  transition: left 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 50px;
-  // color: #323336;
-  color: #ffffff;
-}
+//   &:after {
+//     top: 0;
+//     left: 0;
+//     opacity: 0;
+//     width: 100%;
+//     color: #323237;
+//     display: block;
+//     transition: $speed;
+//     position: absolute;
+//     background: #adadaf;
+//     content: attr(data-back);
+//     transform: translateY(-50%) rotateX(90deg);
+//   }
 
-.button-slip__link-span {
-  // border-bottom: 3px solid #000000;
-  border-bottom: 3px solid #ffffff;
-}
-
-.button-slip__link-box {
-  margin-left: 60px;
-  height: 200px;
-  width: 200px;
-  background: rgba(255, 171, 157, 0.5);
-  transition: background 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
+//   &:before {
+//     top: 0;
+//     left: 0;
+//     opacity: 1;
+//     color: #adadaf;
+//     display: block;
+//     padding: 0 30px;
+//     line-height: 40px;
+//     transition: $speed;
+//     position: relative;
+//     background: #323237;
+//     content: attr(data-front);
+//     transform: translateY(0) rotateX(0);
+//   }
+// }

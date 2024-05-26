@@ -2,15 +2,14 @@
   // color: #363839;
   color: #ffffff;
 
-  @include mq($from: phablet) {
-    width: 60vw;
-    margin: 0 auto;
-    margin-top: 30px;
-  }
-
   @include mq($from: tablet) {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+  }
+
+  @include mq($from: desktop) {
+    padding-bottom: 30px;
   }
 }
 
@@ -21,11 +20,11 @@
   // color: #363839;
   color: #ffffff;
   margin-top: 0;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 0;
 
   @include mq($from: tablet-wide) {
-    margin-right: 40px;
-    padding-left: 10vw;
     font-size: 22px;
-    width: 500px;
   }
 }

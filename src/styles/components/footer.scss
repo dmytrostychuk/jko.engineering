@@ -49,6 +49,11 @@
     width: auto;
     padding-bottom: 0;
   }
+
+  @include mq($from: desktop) {
+    width: 350px;
+    padding-bottom: 0;
+  }
 }
 
 .footer__social {

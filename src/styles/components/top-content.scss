@@ -27,125 +27,123 @@
 }
 
 .top-content--index {
-  background-image: linear-gradient(
-      90deg,
-      rgba(60, 60, 64, 0.7) 100%,
-      rgba(166, 166, 205, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    ),
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
     url(../img/header_bkg2.jpg);
 }
 
 .top-content--index-1 {
-  background-image: linear-gradient(
-      90deg,
-      rgba(60, 60, 64, 0.7) 100%,
-      rgba(166, 166, 205, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    ),
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
     url(../img/service2.jpg);
 }
 
 .top-content--index-2 {
-  background-image: linear-gradient(
-      90deg,
-      rgba(60, 60, 64, 0.7) 100%,
-      rgba(166, 166, 205, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    ),
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
     url(../img/service1.jpg);
 }
 
 .top-content--index-3 {
-  background-image: linear-gradient(
-      90deg,
-      rgba(60, 60, 64, 0.7) 100%,
-      rgba(166, 166, 205, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    ),
-    url(../img/service3.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
+    url(../img/strage-armore.png);
   background-size: contain;
   background-color: #090909;
   background-repeat: no-repeat;
 }
 
 .top-content--index-4 {
-  background-image: linear-gradient(
-      90deg,
-      rgba(60, 60, 64, 0.7) 100%,
-      rgba(166, 166, 205, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    ),
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
     url(../img/service1.1.jpg);
 }
 
+// .top-content__text {
+//   transition: 0.6s ease-in-out;
+//   color: #ffffff;
+//   padding: 0 20px;
+//   max-width: 1700px;
+//   margin: 0 auto;
+
+//   &:hover {
+//     transition: 0.6s ease-in-out;
+//     svg {
+//       transition: 0.6s ease-in-out;
+//       fill: #e74a51;
+//     }
+//   }
+
+//   @include mq($from: tablet) {
+//     padding: 0 30px;
+//   }
+
+//   @include mq($from: tablet-wide) {
+//     padding: 0 40px;
+//   }
+
+//   @include mq($from: desktop) {
+//     padding: 0 50px;
+//   }
+// }
+
+// .top-content__title {
+//   text-transform: uppercase;
+//   font-size: 16px;
+//   margin: 0;
+//   font-weight: 600;
+//   color: #ffffff;
+//   padding-top: 25vh;
+
+//   @include mq($from: phablet) {
+//     font-family: 'Montserrat', sans-serif;
+//     font-size: 9vw;
+//     letter-spacing: 4px;
+//     line-height: 1.5em;
+//   }
+
+//   @include mq($from: tablet) {
+//     // width: 480px;
+//     font-size: 16px;
+//     font-weight: 600;
+//   }
+
+//   @include mq($from: tablet-wide) {
+//     // width: 700px;
+//     font-size: 16px;
+//   }
+
+//   @include mq($from: desktop) {
+//     width: 50vw;
+//     font-size: 16px;
+//   }
+// }
+
 .top-content__text {
-  background-attachment: fixed;
-  transition: 0.6s ease-in-out;
-  color: #ffffff;
-  padding: 0 20px;
-
-  max-width: 1700px;
-  margin: 0 auto;
-
-  &:hover {
-    transition: 0.6s ease-in-out;
-    svg {
-      transition: 0.6s ease-in-out;
-      fill: #e74a51;
-    }
-  }
-
-  @include mq($from: tablet) {
-    padding: 0 30px;
-  }
-
-  @include mq($from: tablet-wide) {
-    padding: 0 40px;
-  }
-
-  @include mq($from: desktop) {
-    padding: 0 50px;
-  }
+  margin-top: 80vh;
+  background-color: rgba(0, 0, 0, 0.2666666667);
 }
 
-.top-content__title {
+.top-content__wrapper {
   position: relative;
-  text-transform: uppercase;
-  font-size: 12vw;
-  margin: 0;
-  font-weight: 600;
-  color: #ffffff;
-  padding-top: 25vh;
-
-  @include mq($from: phablet) {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 9vw;
-    letter-spacing: 4px;
-    line-height: 1.5em;
-  }
-
-  @include mq($from: tablet) {
-    width: 480px;
-    font-size: 8vw;
-    font-weight: 600;
-  }
-
-  @include mq($from: tablet-wide) {
-    width: 700px;
-    font-size: 6vw;
-  }
-
-  @include mq($from: desktop) {
-    width: 50vw;
-    font-size: 98px;
-  }
+  height: 100vh;
+}
+.top-content--container {
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 .top-content__title__wa {
-  padding: 0;
+  text-align: start;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 20px;
+  letter-spacing: 5px;
+  line-height: 1.5em;
 
-  margin-top: 25vh;
+  @include mq($from: tablet) {
+    font-size: 16px;
+  }
+  @include mq($from: tablet-wide) {
+    font-size: 18px;
+  }
 }
 
 .top-content__bg--metal {

@@ -121,3 +121,21 @@
     transform: rotate(45deg);
   }
 }
+
+.btn__container {
+  text-align: center;
+}
+
+.btn-form {
+  margin-top: 0;
+
+  @include mq($from: tablet) {
+    margin-top: 0;
+    width: 100%;
+    margin-left: 20px;
+  }
+  @include mq($from: tablet-wide) {
+    margin-top: 0;
+    width: 100%;
+  }
+}

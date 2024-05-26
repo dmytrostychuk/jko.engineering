@@ -4,7 +4,7 @@
   // color: #363839;
   color: #ffffff;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   // box-shadow: 0px 0px 10px -5px rgb(46 255 0);
   // border-top: 1px solid #dadada;
   background-color: rgba(105, 105, 105, 0.116);
@@ -40,13 +40,14 @@
   margin-bottom: 20px;
 }
 
+.section__text--size {
+  font-size: 18px;
+}
+
 .section--center-text {
   text-align: center;
 }
 
 .section--bcg {
-  // background-color: #323336;
-}
-
-.section--bg {
+  // background-color: #ffffff13;
 }

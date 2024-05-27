@@ -3,7 +3,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px 10px;
   padding-bottom: 30px;
-  background-color: #323336;
 
   @include mq($from: tablet) {
     grid-template-columns: 1fr 1fr 1fr;

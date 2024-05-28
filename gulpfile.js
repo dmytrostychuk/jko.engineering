@@ -61,7 +61,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src('src/img/*').pipe(gulp.dest('build/img'));
+  return gulp.src('src/img/**').pipe(gulp.dest('build/img'));
 });
 
 gulp.task('fonts', function () {

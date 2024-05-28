@@ -6,7 +6,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: bisque;
+  background: rgb(97, 97, 97);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +23,10 @@
   background-color: #02970a;
 }
 .mySwiper .swiper-slide {
-  opacity: 0.4;
+  // opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.mySwiper .swiper-slide-thumb-active img {
   opacity: 1;
 }
 

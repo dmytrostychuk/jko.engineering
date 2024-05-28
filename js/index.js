@@ -33,26 +33,30 @@ var rellax = new Rellax('.rellax', {
   horizontal: false,
 });
 
-let scrollpos = window.scrollY;
-
+const scrollpos = window.scrollY;
 const header = document.querySelector('header');
-
 const scrollChange = 1;
 
 const addClassOnScroll = () => {
   header.classList.add('header__scroll');
   document.querySelector('.nav__inner').classList.add('header__scroll-nav');
   document.querySelector('.menu').classList.add('header__scroll');
+  document
+    .querySelector('.accessories__nav')
+    .classList.add('accessories__nav--scroll'); // Добавляем класс к accessories__nav
 };
 
 const removeClassOnScroll = () => {
   header.classList.remove('header__scroll');
   document.querySelector('.nav__inner').classList.remove('header__scroll-nav');
   document.querySelector('.menu').classList.remove('header__scroll');
+  document
+    .querySelector('.accessories__nav')
+    .classList.remove('accessories__nav--scroll'); // Удаляем класс из accessories__nav
 };
 
 window.addEventListener('scroll', function () {
-  scrollpos = window.scrollY;
+  const scrollpos = window.scrollY;
 
   if (scrollpos >= scrollChange) {
     addClassOnScroll();
@@ -60,6 +64,7 @@ window.addEventListener('scroll', function () {
     removeClassOnScroll();
   }
 });
+
 // - modal
 var modal = document.querySelector('.modal');
 var triggers = document.querySelectorAll('.modal-active');

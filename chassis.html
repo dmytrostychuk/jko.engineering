@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>jko</title>
+
+	<link rel="stylesheet" href="styles/style-min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<div class="main--bg-index"></div>
+	<svg style="display: none">
+		<symbol id="location" viewBox="0 0 1024 1024">
+			<g>
+				<path
+					d="M512 64c-175.8 0-318.3 134.6-318.3 300.5 0 222.9 195.5 430.8 280.1 510.3 21.3 20.1 55.7 20.3 77.4 0.6 85.1-77.2 279.2-278.7 279.2-510.9C830.3 198.6 687.8 64 512 64z m0 401.1c-56.9 0-103.1-46.2-103.1-103.1S455.1 258.9 512 258.9c56.9 0 103.1 46.2 103.1 103.1S568.9 465.1 512 465.1z" />
+				<path d="M364.5 926.5a147.5 21.5 0 1 0 295 0 147.5 21.5 0 1 0-295 0Z" />
+			</g>
+		</symbol>
+
+		<symbol id="phone" viewBox="0 0 477.156 477.156">
+			<g>
+				<path d="M475.009,380.316l-2.375-7.156c-5.625-16.719-24.062-34.156-41-38.75l-62.688-17.125c-17-4.625-41.25,1.594-53.688,14.031
+          l-22.688,22.688c-82.453-22.28-147.109-86.938-169.359-169.375L145.9,161.94c12.438-12.438,18.656-36.656,14.031-53.656
+          l-17.094-62.719c-4.625-16.969-22.094-35.406-38.781-40.969L96.9,2.19c-16.719-5.563-40.563,0.063-53,12.5L9.962,48.659
+          C3.899,54.69,0.024,71.94,0.024,72.003c-1.187,107.75,41.063,211.562,117.281,287.781
+          c76.031,76.031,179.454,118.219,286.891,117.313c0.562,0,18.312-3.813,24.375-9.845l33.938-33.938
+          C474.946,420.878,480.571,397.035,475.009,380.316z" />
+			</g>
+		</symbol>
+
+		<symbol id="mail" viewBox="0 0 64 64">
+			<g>
+				<path
+					d="M63.125,9.977c-0.902-1.321-2.419-2.194-4.131-2.194H5.006c-1.676,0-3.158,0.842-4.067,2.117l31.16,25.982L63.125,9.977z" />
+				<path d="M0.006,14.328v36.889c0,2.75,2.25,5,5,5h53.988c2.75,0,5-2.25,5-5V14.461L32.099,41.09L0.006,14.328z" />
+			</g>
+		</symbol>
+
+		<symbol id="clock" viewBox="0 0 485.213 485.212">
+			<g>
+				<path d="M242.607,0C108.629,0,0.001,108.628,0.001,242.606c0,133.976,108.628,242.606,242.606,242.606
+          c133.978,0,242.604-108.631,242.604-242.606C485.212,108.628,376.585,0,242.607,0z M257.771,454.116v-29.557h-30.327v29.557
+          c-104.925-7.458-188.883-91.419-196.346-196.344h29.554v-30.327H31.098c7.463-104.928,91.421-188.886,196.346-196.349v29.554
+          h30.327V31.097c104.926,7.462,188.882,91.421,196.344,196.349h-29.552v30.327h29.552
+          C446.652,362.697,362.696,446.658,257.771,454.116z M354.226,178.163c2.072,3.615,0.83,8.266-2.782,10.368l-80.092,46.227
+          c0.691,2.577,1.582,5.066,1.582,7.848c0,16.762-13.581,30.324-30.326,30.324c-16.75,0-30.327-13.562-30.327-30.324l-82.299-47.503
+          c-7.257-4.203-9.743-13.474-5.554-20.729c4.174-7.285,13.459-9.771,20.715-5.565l82.775,47.798
+          c4.411-2.487,9.239-4.324,14.69-4.324c8.471,0,16.092,3.494,21.604,9.122l79.648-46.024
+          C347.416,173.277,352.064,174.521,354.226,178.163z" />
+			</g>
+		</symbol>
+
+		<symbol id="facebook" viewBox="0 0 24 24">
+			<g>
+				<path
+					d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0" />
+			</g>
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" />
+			<path
+				d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" />
+		</symbol>
+
+
+
+	</svg>
+	<header class="header">
+		<button class="button__scroll" id="scrollButton" onclick="scrollToTop()">
+			<span class="scroll__aroww">Вгору</span>
+		</button>
+		<div class="header__top mobile-none">
+			<div class="header__menu-ds  header__wrapper">
+				<div>
+					<ul class="nav__list nav__list-social">
+						<li class="nav__item-social">
+							<a href="https://www.instagram.com/jko.engineering/" class="link-social link--hover">
+								<svg class="link-social--svg" width="30" height="20">
+									<use xlink:href="#instagram"></use>
+								</svg>
+								<span class="none">jko.engineering</span>
+							</a>
+						</li>
+						<li class="nav__item-social">
+							<a class="link-social link--hover" href="tel:+380736308431">
+								<svg class="link-social--svg" width="30" height="20">
+									<use xlink:href="#phone"></use>
+								</svg>
+								<span>+38 073 630 84 31</span>
+							</a>
+						</li>
+						<li class="nav__item-social">
+							<a href="mailto:jko.engineering@gmail.com" class="link-social link--hover">
+								<svg class="link-social--svg" width="30" height="20">
+									<use xlink:href="#mail"></use>
+								</svg>
+								<span>jko.engineering@gmail.com</span>
+							</a>
+						</li>
+						<li class="nav__item-social">
+							<svg width="30" height="30">
+								<use xlink:href="#location"></use>
+							</svg>
+							<span class="none">Луцьк</span>
+						</li>
+					</ul>
+				</div>
+				<div class="header__lang mobile-none">
+					<button class="header__btn" data-btn="ua">UA</button>
+					<button class="header__btn" data-btn="en">EN</button>
+				</div>
+			</div>
+		</div>
+		<div class="header__wrapper">
+			<div class="header__inner ">
+				<div class="header__container">
+					<div class="header__logo">
+						<h1 class="header__title"><a href="index.html"><img class="header__logo-img " src="img/logo_header.png"
+									alt="logo" width="200"></a></h1>
+					</div>
+					<div class="header__lang desktop-none">
+						<button class="header__btn" data-btn="ua">UA</button>
+						<button class="header__btn" data-btn="en">EN</button>
+					</div>
+					<div class="header__menu-button">
+						<button class="navbar__button" type="button">
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__menu menu">
+				<div class="menu__wrapper">
+					<div>
+					</div>
+					<div class="nav__inner">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="metal-processing.html" class="link-hover" data-lang="nav_page-1">Обробка на верстатах із
+									ЧПК</a>
+							</li>
+							<li class="nav__item">
+								<a href="drawing.html" class="link-hover" data-lang="nav_page-2">Розробка конструкторської
+									документації</a>
+							</li>
+							<li class="nav__item">
+								<a href="weapon-accessories.html" class="link-hover active-link" data-lang="nav_page-3"
+									id="accessories-link">Збройові аксесуари<span class="nav__arrow" id="arrow"></span></a>
+								<div id="accessories" class="accessories__nav">
+									<a href="chassis.html" class="link-hover accessories__link active-link"><span
+											class="accessories__text">Системи
+											шасі</span>
+										<img src="img/weapon-accessories_1.svg" class="link-social--svg" alt="weapon-accessories_1"
+											width="100"></a>
+									<a href="mounting-optics.html" class="link-hover accessories__link"><span
+											class="accessories__text">Кріплення
+											для оптики</span> <img src="img/weapon-accessories_4.svg" alt="weapon-accessories_2"
+											width="100"></a>
+									<a href="bipod.html" class="link-hover accessories__link"><span class="accessories__text">Сошки</span>
+										<img src="img/weapon-accessories_5.svg" alt="weapon-accessories_5" width="100"></a>
+									<a href="accessories.html" class="link-hover accessories__link"><span
+											class="accessories__text">Аксесуари</span> <img src="img/weapon-accessories_2.svg"
+											alt="weapon-accessories_2" width="100"></a>
+								</div>
+							</li>
+						</ul>
+
+						<ul class="nav__list nav__list-social desktop-none">
+							<li class="nav__item-social">
+								<a class="link-social link--hover" href="tel:+380736308431">
+									<svg class="link-social--svg" width="30" height="20">
+										<use xlink:href="#phone"></use>
+									</svg>
+									+38 (073) 630 84 31
+								</a>
+							</li>
+							<li class="nav__item-social">
+								<a href="mailto:jko.engineering@gmail.com" class="link-social link--hover">
+									<svg class="link-social--svg" width="30" height="20">
+										<use xlink:href="#mail"></use>
+									</svg>
+									jko.engineering@gmail.com
+								</a>
+							</li>
+							<li class="nav__item-social">
+								<a href="https://www.instagram.com/jko.engineering/" class="link-social link--hover">
+									<svg class="link-social--svg" width="30" height="20">
+										<use xlink:href="#instagram"></use>
+									</svg>
+									<span class="none">jko.engineering</span>
+								</a>
+							</li>
+							<li class="nav__item-social">
+								<svg class="" width="30" height="30">
+									<use xlink:href="#location"></use>
+								</svg>
+								<span class="none">Луцьк</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="assortment">
+			<div class="assortment__background assortment__background--chassis">
+				<div class="assortment__wrapper">
+					<div class="container">
+						<h1 class="assortment__title">Системи шассі</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs__list container">
+				<li class="breadcrumbs__item"><a href="index.html">Головна</a></li>
+				<li class="breadcrumbs__item"><a href="weapon-accessories.html">Збройові аксесуари</a></li>
+				<li class="breadcrumbs__item"><span>Системи шассі</span></li>
+			</ul>
+		</div>
+
+		<section class="section section--bg">
+			<div class="container">
+				<div class="goods">
+					<div class="product__box">
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+									<img src="img/picatinny-1.png" class="product__image-photo" alt="" width="100">
+								</div>
+								<div class="product__content">
+									<p class="product__name">Планка Picatinny для Tikka T1 160 мм</p>
+									<p class="product__code">PT-1</p>
+									<p class="product__price">5000 ₴</p>
+								</div>
+								<a href="picatinny-1.html" class="product__link"></a>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<article class="product__card">
+							<div class="product__card-container">
+								<div class="product__img">
+								</div>
+								<div class="product__content">
+									<p class="product__code">Очікуйте на оновлення товару!</p>
+								</div>
+						</article>
+						<!-- <div class="product__more">
+							<a href="chassis.html" class="product__more-link">
+								<span>Більше товару</span>
+								<svg width="13px" height="10px" viewBox="0 0 13 10">
+									<path d="M1,5 L11,5"></path>
+									<polyline points="8 1 12 5 8 9"></polyline>
+								</svg>
+							</a>
+						</div> -->
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__logo">
+				<div class="header__logo">
+					<h1 class="header__title"><a href="index.html"><img class="header__logo-img " src="img/logo_header.png"
+								alt="logo" width="200"></a></h1>
+				</div>
+				<div class="footer__social">
+				</div>
+			</div>
+			<div class="footer__block">
+				<h3 class="footer__title">Контакти</h3>
+				<ul class="footer__contact-list">
+					<li class="footer__contact-item"><a href="tel:+380736308431" class="footer__link">
+							<svg class="footer__link-svg" width="30" height="20">
+								<use xlink:href="#phone"></use>
+							</svg> +38 (073) 630 84 31</a></li>
+					<li class="footer__contact-item"><a href="mailto:jko.enjineering@gmail.com" class="footer__link"><svg
+								class="footer__link-svg" width="30" height="20">
+								<use xlink:href="#mail"></use>
+							</svg>jko.enjineering@gmail.com</a></li>
+					<li class="footer__contact-item"><a href="https://www.instagram.com/jko.engineering/"
+							class="footer__link"><svg class="footer__link-svg" width="30" height="20">
+								<use xlink:href="#instagram"></use>
+							</svg>jko.engineering</a></li>
+				</ul>
+			</div>
+			<div class="footer__block">
+				<h3 class="footer__title">Навігація</h3>
+				<ul class="footer__contact-list">
+					<li class="footer__nav-item"><a class="footer__link" href="metal-processing.html">Обробка на верстатах із
+							ЧПК</a></li>
+					<li class="footer__nav-item"><a class="footer__link" href="drawing.html">Розробка конструкторської
+							документації</a>
+					</li>
+					<li class="footer__nav-item"><a class="footer__link" href="weapon-accessories.html">Збройові аксесуари</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__copyright ">
+			<div class="footer__flag">
+				<img src="img/flag_ua.jpg" alt="Flag UA" width="21">
+				<span>UA</span>
+			</div>
+			<div class="footer__rights">© 2024 jko.engineering. Усі права захищено.</div>
+		</div>
+	</footer>
+	<div class="modal">
+		<div class="modal__inner">
+			<div class="modal-content">
+				<button class="close-button"></button>
+				<section class="modal__content">
+					<h4 class="modal__title">Зворотній зв'язок</h4>
+					<p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше
+						звʼяжеться з Вами!</p>
+					<form class="modal__form">
+						<input class="modal__input" type="text" placeholder="телефон або e-mail">
+						<button class="button button-modal" type="submit">Відправити запит</button>
+					</form>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/lang.js"></script>
+	<script src="js/swiper.js"></script>
+</body>
+
+</html>

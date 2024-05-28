@@ -422,7 +422,7 @@ ul {
 
 .main--bg-index {
   z-index: -2;
-  background: url(../img/back-line.svg) center center;
+  background: url(../img/bg-line.svg) center center;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1804,7 +1804,7 @@ svg:hover {
 }
 
 .assortment__background {
-  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/123.jpg);
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/mounting-optics.jpg);
   width: 100%;
   height: 100%;
   background-position: center center;

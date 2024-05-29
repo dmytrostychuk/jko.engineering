@@ -1580,12 +1580,17 @@ svg:hover {
 }
 
 .swiper-slide {
+  height: 100%;
   text-align: center;
   font-size: 18px;
   background: rgb(97, 97, 97);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-zoom-container img {
+  background-color: #e1e1e1;
 }
 
 .swiper-slide img {
@@ -1600,6 +1605,7 @@ svg:hover {
 }
 
 .mySwiper .swiper-slide-thumb-active img {
+  background-color: #e1e1e1;
   opacity: 1;
 }
 
@@ -1814,6 +1820,10 @@ svg:hover {
 
 .assortment__background--accessories {
   background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/accessories.jpg);
+}
+
+.assortment__background--bipod {
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c), url(../img/bipod.jpg);
 }
 
 .assortment__wrapper {
@@ -2516,7 +2526,7 @@ svg:hover {
   .card-top,
   .card-bottom {
     float: right;
-    width: 53%;
+    width: 43%;
   }
   .card-top {
     padding: 25px 25px;
@@ -2528,7 +2538,7 @@ svg:hover {
     font-size: 25px;
   }
   .card__gallery {
-    width: 35%;
+    width: 45%;
     padding: 0 30px;
   }
   .card__text {

@@ -29,7 +29,7 @@
 
   @include mq($from: tablet-wide) {
     float: right;
-    width: 53%;
+    width: 43%;
   }
 }
 
@@ -104,7 +104,7 @@
   }
 
   @include mq($from: tablet-wide) {
-    width: 35%;
+    width: 45%;
     padding: 0 30px;
   }
 }

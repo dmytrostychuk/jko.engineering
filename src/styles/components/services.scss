@@ -12,6 +12,9 @@
     grid-column-gap: 20px;
     flex-direction: row;
   }
+  @include mq($from: tablet-wide) {
+    max-width: 1700px;
+  }
   @include mq($from: desktop) {
     height: 613px;
     margin-bottom: 30px;
@@ -24,6 +27,10 @@
   @include mq($from: tablet) {
     width: 50%;
   }
+  @include mq($from: tablet-wide) {
+    width: 70%;
+  }
+
   @include mq($from: desktop) {
     height: 600px;
   }
@@ -68,6 +75,10 @@
 .services__card-vertical {
   @include mq($from: tablet) {
     width: 50%;
+  }
+
+  @include mq($from: tablet-wide) {
+    width: 30%;
   }
 
   @include mq($from: desktop) {

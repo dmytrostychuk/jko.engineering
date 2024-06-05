@@ -2406,11 +2406,20 @@ svg:hover {
   .top-content__title__wa {
     font-size: 18px;
   }
+  .services__card-box {
+    max-width: 1700px;
+  }
+  .services__cards-inner {
+    width: 70%;
+  }
   .services__card {
     margin-bottom: 10px;
   }
   .services__card:hover {
     box-shadow: 0px 0px 9px 0px rgb(255, 255, 255);
+  }
+  .services__card-vertical {
+    width: 30%;
   }
   .services__hover-block {
     position: absolute;

@@ -12,6 +12,7 @@ var swiper2 = new Swiper('.mySwiper2', {
     swiper: swiper,
   },
   zoom: true,
+  loop: true,
 });
 
 var swiper = new Swiper('.mySwiper3', {

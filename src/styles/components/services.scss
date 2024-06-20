@@ -28,11 +28,12 @@
     width: 50%;
   }
   @include mq($from: tablet-wide) {
-    width: 70%;
+    width: 50%;
   }
 
   @include mq($from: desktop) {
     height: 600px;
+    width: 70%;
   }
 }
 
@@ -78,10 +79,10 @@
   }
 
   @include mq($from: tablet-wide) {
-    width: 30%;
   }
 
   @include mq($from: desktop) {
+    width: 30%;
     height: 100%;
   }
 }

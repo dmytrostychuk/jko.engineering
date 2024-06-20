@@ -59,6 +59,7 @@
     "stylelint-config-standard": "^29.0.0"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "gh-pages": "^3.2.3",
     "swiper": "^11.1.1"
   }

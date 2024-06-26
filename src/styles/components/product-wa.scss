@@ -24,13 +24,15 @@
 
 .product__card {
   position: relative;
-  padding: 10px;
   width: 100%;
 
   &:hover .product__img,
   &:hover .product__content {
     background-color: #f6f6f6;
     transition: all 0.3s ease;
+  }
+  @include mq($from: tablet-wide) {
+    padding: 10px;
   }
 
   @include mq($from: desktop) {

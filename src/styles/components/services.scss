@@ -161,6 +161,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff;
+  line-height: 1.3em;
 
   @include mq($from: tablet) {
     margin: 0;
@@ -192,7 +193,8 @@
 .services__text {
   line-height: 2em;
   text-align: center;
-  color: #b9b4b4;
+  color: #fff;
+  font-size: 14px;
 
   @include mq($from: tablet) {
     position: absolute;
@@ -223,12 +225,14 @@
       rgba(166, 166, 205, 1) 100%,
       rgba(0, 212, 255, 1) 100%
     );
+    line-height: 1.3em;
   }
 
   @include mq($from: desktop) {
     bottom: 100%;
     padding-top: 100px;
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
   }
 }
 

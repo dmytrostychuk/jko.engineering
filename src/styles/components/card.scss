@@ -168,6 +168,7 @@
   color: #ffffff;
 
   th {
+    max-width: 280px;
     font-weight: 500;
     opacity: 1;
     @include mq($from: phablet) {

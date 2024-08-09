@@ -460,6 +460,10 @@ svg {
   overflow: hidden;
 }
 
+.collor--green {
+  color: #5bb860;
+}
+
 .header__btn {
   padding: 5px 10px;
   margin-bottom: 7px;

@@ -116,36 +116,45 @@ function scrollToTop() {
     behavior: 'smooth',
   });
 }
+//form
+document
+  .getElementById('modalForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault(); // Запобігає стандартному надсиланню форми
 
-// form
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.modal__form');
+    const contactInput = document.querySelector('input[name="contact"]');
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // prevent the form from submitting normally
+    // Перевірка довжини інпуту
+    if (contactInput.value.length < 6) {
+      alert('Контакт має містити не менше 6 символів');
+      return;
+    }
 
-    const email = document.querySelector('.modal__input').value;
-    sendEmail(email);
-  });
+    const formData = new FormData(this); // Отримання даних форми
 
-  function sendEmail(email) {
-    fetch('send_email.php', {
+    fetch(this.action, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email: email }),
+      body: formData,
     })
-      .then((response) => {
-        if (response.ok) {
-          alert('Message sent!');
-        } else {
-          alert('Error sending message');
-        }
+      .then((response) => response.json()) // Розбір JSON відповіді
+      .then((data) => {
+        // Використання alert для відображення повідомлення
+        alert(data.message);
+        // Закриття модального вікна після надсилання повідомлення
+        closeModal();
+        // Очищення форми після успішного надсилання
+        document.getElementById('modalForm').reset();
       })
       .catch((error) => {
-        console.error('Error:', error);
-        alert('Error sending message');
+        console.error('Error:', error); // Обробка помилок
+        alert('Щось пішло не так. Спробуйте ще раз.');
       });
-  }
-});
+  });
+
+function closeModal() {
+  const modal = document.querySelector('.modal');
+  modal.classList.remove('show-modal'); // Знімає клас show-modal з модального вікна
+  document.body.classList.remove('lock'); // Знімає клас lock з body
+}
+
+console.log('JavaScript завантажений та працює');

@@ -225,7 +225,7 @@
             <div class="top-content__wrapper">
               <div class="top-content__text top-content__text--wa ">
                 <div class="top-content--container">
-                  <h3 class="top-content__title  top-content__title__wa">Тут коротка інформація</h3>
+                  <h3 class="top-content__title  top-content__title__wa"></h3>
                 </div>
               </div>
             </div>
@@ -278,8 +278,8 @@
           <a href="drawing.html" class="service__link">розробці конструкторської докуметації </a>
           ,
           <a href="metal-processing.html" class="service__link">виготовленні та обробці металевих виробів</a> для різних
-          галузей промисловості, включаючи автомобільну, авіаційну, будівельну, електронну та напрямок збройових
-          аксесуарів.
+          галузей промисловості, включаючи автомобільну, авіаційну, будівельну, електронну та напрямок
+          <a href="metal-processing.html" class="service__link">збройових аксесуарів</a>.
           Ми використовуємо новітні технології та сучасне обладнання, що дозволяє нам забезпечувати високу точність та
           ефективність на всіх етапах обробки металу.
           Наша команда складається з досвідчених інженерів та технічних спеціалістів, які гарантують індивідуальний та
@@ -400,13 +400,15 @@
   <div class="modal">
     <div class="modal__inner">
       <div class="modal-content">
-        <button class="close-button"></button>
+        <button class="close-button" onclick="closeModal()"></button>
         <section class="modal__content">
           <h4 class="modal__title">Зворотній зв'язок</h4>
-          <p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше
-            звʼяжеться з Вами!</p>
-          <form class="modal__form">
-            <input class="modal__input" type="text" placeholder="телефон або e-mail">
+          <p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше звʼяжеться
+            з Вами!</p>
+          <form id="modalForm" class="modal__form" method="POST" action="/send_email_modal.php"
+            enctype="multipart/form-data">
+            <input class="modal__input" type="text" name="contact" placeholder="телефон або e-mail" required
+              minlength="6">
             <button class="button button-modal" type="submit">Відправити запит</button>
           </form>
         </section>

@@ -236,27 +236,32 @@
 
 							<div class="swiper-slide">
 								<div class="swiper-zoom-container">
-									<img src="img/mo-2/mo-1.1.png" />
+									<img src="img/mo-2/1.avif" />
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="swiper-zoom-container">
-									<img src="img/mo-2/mo-6.png" />
+									<img src="img/mo-2/2.avif" />
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="swiper-zoom-container">
-									<img src="img/mo-2/mo-2.png" />
+									<img src="img/mo-2/3.avif" />
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="swiper-zoom-container">
-									<img src="img/mo-2/mo-3.1.png" />
+									<img src="img/mo-2/4.avif" />
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="swiper-zoom-container">
-									<img src="img/mo-2/mo-4.1.png" />
+									<img src="img/mo-2/5.avif" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-zoom-container">
+									<img src="img/mo-2/6.avif" />
 								</div>
 							</div>
 
@@ -265,19 +270,22 @@
 					<div thumbsSlider="" class="swiper mySwiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img class="card__img" src="img/mo-2/mo-1.1.png" />
+								<img class="card__img" src="img/mo-2/1.avif" />
 							</div>
 							<div class="swiper-slide">
-								<img class="card__img" src="img/mo-2/mo-6.png" />
+								<img class="card__img" src="img/mo-2/2.avif" />
 							</div>
 							<div class="swiper-slide">
-								<img class="card__img" src="img/mo-2/mo-2.png" />
+								<img class="card__img" src="img/mo-2/3.avif" />
 							</div>
 							<div class="swiper-slide">
-								<img class="card__img" src="img/mo-2/mo-3.1.png" />
+								<img class="card__img" src="img/mo-2/4.avif" />
 							</div>
 							<div class="swiper-slide">
-								<img class="card__img" src="img/mo-2/mo-4.1.png" />
+								<img class="card__img" src="img/mo-2/5.avif" />
+							</div>
+							<div class="swiper-slide">
+								<img class="card__img" src="img/mo-2/6.avif" />
 							</div>
 						</div>
 					</div>
@@ -401,13 +409,15 @@
 	<div class="modal">
 		<div class="modal__inner">
 			<div class="modal-content">
-				<button class="close-button"></button>
+				<button class="close-button" onclick="closeModal()"></button>
 				<section class="modal__content">
 					<h4 class="modal__title">Зворотній зв'язок</h4>
-					<p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше
-						звʼяжеться з Вами!</p>
-					<form class="modal__form">
-						<input class="modal__input" type="text" placeholder="телефон або e-mail">
+					<p class="modal__text">Залиште Ваш номер телефону, або електрону адресу, і наш менеджер якнайшвидше звʼяжеться
+						з Вами!</p>
+					<form id="modalForm" class="modal__form" method="POST" action="/send_email_modal.php"
+						enctype="multipart/form-data">
+						<input class="modal__input" type="text" name="contact" placeholder="телефон або e-mail" required
+							minlength="6">
 						<button class="button button-modal" type="submit">Відправити запит</button>
 					</form>
 				</section>

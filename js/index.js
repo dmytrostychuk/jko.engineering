@@ -116,45 +116,55 @@ function scrollToTop() {
     behavior: 'smooth',
   });
 }
-//form
-document
-  .getElementById('modalForm')
-  .addEventListener('submit', function (event) {
-    event.preventDefault(); // Запобігає стандартному надсиланню форми
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('modalForm');
+  const closeButton = document.querySelector('.close-button');
 
-    const contactInput = document.querySelector('input[name="contact"]');
+  closeButton.addEventListener('click', closeModal);
 
-    // Перевірка довжини інпуту
-    if (contactInput.value.length < 6) {
-      alert('Контакт має містити не менше 6 символів');
-      return;
-    }
+  let formSubmitted = false;
 
-    const formData = new FormData(this); // Отримання даних форми
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-    fetch(this.action, {
+    if (formSubmitted) return;
+
+    formSubmitted = true;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch('/send_email_modal.php', {
       method: 'POST',
       body: formData,
     })
-      .then((response) => response.json()) // Розбір JSON відповіді
+      .then((response) => response.text())
       .then((data) => {
-        // Використання alert для відображення повідомлення
-        alert(data.message);
-        // Закриття модального вікна після надсилання повідомлення
-        closeModal();
-        // Очищення форми після успішного надсилання
-        document.getElementById('modalForm').reset();
+        document.body.classList.remove('lock');
+
+        const modal = document.querySelector('.modal');
+        if (modal.classList.contains('show-modal')) {
+          modal.classList.remove('show-modal');
+        }
+
+        alert('Ваш запит відправлено!');
+        closeModal(); // Закриваємо модальне вікно після відправки форми
+
+        formSubmitted = false;
+        submitButton.disabled = false;
       })
       .catch((error) => {
-        console.error('Error:', error); // Обробка помилок
-        alert('Щось пішло не так. Спробуйте ще раз.');
+        console.error('Помилка:', error);
+        alert('Сталася помилка при відправці форми.');
+        formSubmitted = false;
+        submitButton.disabled = false;
       });
   });
+});
 
 function closeModal() {
   const modal = document.querySelector('.modal');
-  modal.classList.remove('show-modal'); // Знімає клас show-modal з модального вікна
-  document.body.classList.remove('lock'); // Знімає клас lock з body
+  modal.classList.remove('show-modal'); // Приховуємо модальне вікно, знімаючи клас
 }
-
-console.log('JavaScript завантажений та працює');

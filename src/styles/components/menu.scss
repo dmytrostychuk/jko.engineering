@@ -8,6 +8,7 @@
   @include mq($from: tablet-wide) {
     position: relative;
     display: flex;
+    width: 100vh;
     flex-direction: row;
     width: auto;
     align-items: center;
@@ -18,7 +19,7 @@
       position: absolute;
       z-index: -1;
       width: 100vw;
-      height: 56px;
+      height: 65px;
       top: 0;
       left: 0;
       background-color: rgba(50, 51, 54, 0.692);
@@ -34,7 +35,7 @@
       height: 0;
       border-left: 56px solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
       border-right: 0 solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
-      border-top: 56px solid rgba(50, 51, 54, 0.692);
+      border-top: 65px solid rgba(50, 51, 54, 0.692);
       transition: 0.5s ease;
     }
   }
@@ -44,6 +45,7 @@
   position: absolute;
   transform: translateY(0);
   transition: 0.6s ease-out;
+  width: 100%;
 
   @include mq($from: tablet-wide) {
     display: flex;
@@ -108,11 +110,12 @@
   list-style: none;
   text-transform: uppercase;
   padding: 0;
+  line-height: 30px;
 
   li {
     margin-bottom: 20px;
     letter-spacing: 1px;
-    line-height: 20px;
+    line-height: 30px;
 
     @include mq($from: tablet) {
       margin-bottom: 25px;

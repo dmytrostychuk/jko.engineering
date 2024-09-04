@@ -22,6 +22,7 @@ ul {
 
 .main {
   position: relative;
+  margin-bottom: 50px;
 }
 
 // .main--bg {
@@ -115,6 +116,10 @@ ul {
   @include mq($from: tablet-wide) {
     display: block;
   }
+}
+
+.lock {
+  overflow: hidden;
 }
 
 .none {

@@ -405,6 +405,7 @@ ul {
 
 .main {
   position: relative;
+  margin-bottom: 50px;
 }
 
 .main--bg {
@@ -440,6 +441,10 @@ ul {
 
 .mobile-none {
   display: none;
+}
+
+.lock {
+  overflow: hidden;
 }
 
 .section {
@@ -597,7 +602,7 @@ svg {
 }
 
 .header__scroll .menu::before {
-  border-top: 56px solid #323336;
+  border-top: 65px solid #323336;
   transition: 0.5s ease;
 }
 
@@ -968,6 +973,7 @@ svg {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   transition: 0.6s ease-out;
+  width: 100%;
 }
 
 .menu__wrapper {
@@ -1005,11 +1011,12 @@ svg {
   list-style: none;
   text-transform: uppercase;
   padding: 0;
+  line-height: 30px;
 }
 .nav__list li {
   margin-bottom: 20px;
   letter-spacing: 1px;
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .nav__item {
@@ -1057,7 +1064,7 @@ svg:hover {
   z-index: -1;
   position: relative;
   color: #3c4852;
-  height: 100vh;
+  height: 50vh;
   top: 0;
   background-attachment: fixed;
   background-color: #090909;
@@ -1077,7 +1084,7 @@ svg:hover {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-attachment: fixed;
 }
 
@@ -1105,7 +1112,7 @@ svg:hover {
 }
 
 .top-content__text {
-  margin-top: 80vh;
+  margin-top: 55vh;
   background-color: rgba(0, 0, 0, 0.2666666667);
 }
 
@@ -1435,7 +1442,7 @@ svg:hover {
 .modal__inner {
   position: relative;
   z-index: 100;
-  top: 5vw;
+  top: 25vh;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -1610,7 +1617,7 @@ svg:hover {
 }
 
 .swiper-slide {
-  height: 100%;
+  height: 70vh;
   text-align: center;
   font-size: 18px;
   background: rgb(97, 97, 97);
@@ -1643,8 +1650,45 @@ svg:hover {
   margin-top: 10px;
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(51, 51, 51, 0.65);
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 0.5;
+}
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 20px;
+  height: 20px;
+}
+
+.swiper-button-next {
+  right: -27px;
+}
+.swiper-button-next:hover {
+  opacity: 1;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.swiper-button-prev {
+  left: -27px;
+}
+.swiper-button-prev:hover {
+  opacity: 1;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
 .header-wa {
-  height: 100vh;
+  height: 70vh;
   background-color: rgba(65, 65, 65, 0.7) 100%;
 }
 
@@ -1882,9 +1926,11 @@ svg:hover {
 .breadcrumbs__list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  padding-bottom: 30px;
   list-style: none;
   letter-spacing: 1.5px;
+  overflow-y: auto;
+  white-space: nowrap;
 }
 .breadcrumbs__list span {
   color: rgba(255, 255, 255, 0.5568627451);
@@ -1909,7 +1955,7 @@ svg:hover {
 }
 
 .breadcrumbs--card {
-  padding-top: 110px;
+  padding-top: 120px;
   padding-bottom: 20px;
   background-color: rgba(214, 214, 214, 0.1);
   margin-bottom: 0;
@@ -2305,7 +2351,7 @@ svg:hover {
     display: flex;
     justify-content: space-between;
     max-width: 1700px;
-    height: 56px;
+    height: 67px;
     margin: 0 auto;
     padding: 0 40px;
   }
@@ -2339,6 +2385,7 @@ svg:hover {
   .menu {
     position: relative;
     display: flex;
+    width: 100vh;
     flex-direction: row;
     width: auto;
     align-items: center;
@@ -2351,7 +2398,7 @@ svg:hover {
     position: absolute;
     z-index: -1;
     width: 100vw;
-    height: 56px;
+    height: 65px;
     top: 0;
     left: 0;
     background-color: rgba(50, 51, 54, 0.692);
@@ -2366,7 +2413,7 @@ svg:hover {
     height: 0;
     border-left: 56px solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
     border-right: 0 solid transparent; /* Розраховано за допомогою теореми Піфагора (50*√2) */
-    border-top: 56px solid rgba(50, 51, 54, 0.692);
+    border-top: 65px solid rgba(50, 51, 54, 0.692);
     transition: 0.5s ease;
   }
   .menu--active {
@@ -2418,6 +2465,12 @@ svg:hover {
   }
   .nav__list-social img {
     height: 30px;
+  }
+  .top-content__bg {
+    height: 100vh;
+  }
+  .top-content__text {
+    margin-top: 80vh;
   }
   .top-content__title__wa {
     font-size: 18px;
@@ -2521,6 +2574,12 @@ svg:hover {
     transition: 0.5s ease;
     pointer-events: auto;
   }
+  .swiper-slide {
+    height: 100vh;
+  }
+  .header-wa {
+    height: 100vh;
+  }
   .product__box {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
@@ -2561,11 +2620,18 @@ svg:hover {
     font-size: 60px;
     font-weight: 700;
   }
+  .breadcrumbs__list {
+    overflow-y: none;
+    white-space: nowrap;
+  }
   .breadcrumbs__item::after {
     margin: 0 10px;
   }
   .breadcrumbs--card {
-    padding-top: 130px;
+    padding-top: 150px;
+  }
+  .card {
+    height: 810px;
   }
   .card-top,
   .card-bottom {

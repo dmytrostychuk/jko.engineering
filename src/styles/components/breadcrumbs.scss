@@ -6,13 +6,20 @@
 .breadcrumbs__list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  padding-bottom: 30px;
   list-style: none;
   letter-spacing: 1.5px;
+  overflow-y: auto;
+  white-space: nowrap;
 
   span {
     color: #ffffff8e;
     font-weight: 600;
+  }
+
+  @include mq($from: tablet-wide) {
+    overflow-y: none;
+    white-space: nowrap;
   }
 }
 .breadcrumbs__item {
@@ -40,13 +47,13 @@
 }
 
 .breadcrumbs--card {
-  padding-top: 110px;
+  padding-top: 120px;
   padding-bottom: 20px;
   background-color: rgb(214 214 214 / 10%);
   margin-bottom: 0;
   margin-top: 0;
   line-height: 1.8em;
   @include mq($from: tablet-wide) {
-    padding-top: 130px;
+    padding-top: 150px;
   }
 }

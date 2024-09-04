@@ -9,6 +9,9 @@
     padding-top: 70px;
     padding-bottom: 50px;
   }
+  @include mq($from: tablet-wide) {
+    height: 810px;
+  }
 }
 
 .card__img {

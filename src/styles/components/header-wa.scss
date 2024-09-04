@@ -1,6 +1,9 @@
 .header-wa {
-  height: 100vh;
+  height: 70vh;
   background-color: rgba(65, 65, 65, 0.7) 100%;
+  @include mq($from: tablet-wide) {
+    height: 100vh;
+  }
 }
 
 .top-content__bg--wa-1 {

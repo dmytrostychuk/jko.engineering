@@ -9,7 +9,7 @@
   padding-bottom: 30px;
   list-style: none;
   letter-spacing: 1.5px;
-  overflow-y: auto;
+  overflow-y: hidden;
   white-space: nowrap;
 
   span {
@@ -18,7 +18,7 @@
   }
 
   @include mq($from: tablet-wide) {
-    overflow-y: none;
+    overflow-y: hidden;
     white-space: nowrap;
   }
 }

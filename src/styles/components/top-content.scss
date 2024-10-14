@@ -22,7 +22,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   background-attachment: fixed;
   @include mq($from: tablet-wide) {
     height: 100vh;
@@ -54,7 +54,7 @@
 
 .top-content--index-4 {
   background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
-    url(../img/service1.1.jpg);
+    url(../img/mp-gallery/16.webp);
 }
 
 // .top-content__text {
@@ -118,7 +118,7 @@
 // }
 
 .top-content__text {
-  margin-top: 55vh;
+  margin-top: 30vh;
   background-color: rgba(0, 0, 0, 0.2666666667);
   @include mq($from: tablet-wide) {
     margin-top: 80vh;

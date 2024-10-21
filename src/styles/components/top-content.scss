@@ -25,7 +25,7 @@
   height: 50vh;
   background-attachment: fixed;
   @include mq($from: tablet-wide) {
-    height: 100vh;
+    height: 70vh;
   }
 }
 
@@ -55,6 +55,11 @@
 .top-content--index-4 {
   background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
     url(../img/mp-gallery/16.webp);
+}
+
+.top-content--index-5 {
+  background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.6), #292b2c),
+    url(../img/service1.1.jpg);
 }
 
 // .top-content__text {
@@ -121,7 +126,7 @@
   margin-top: 30vh;
   background-color: rgba(0, 0, 0, 0.2666666667);
   @include mq($from: tablet-wide) {
-    margin-top: 80vh;
+    margin-top: 55vh;
   }
 }
 

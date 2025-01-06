@@ -65,12 +65,15 @@ window.addEventListener('scroll', function () {
   }
 });
 
+// - modal
 var modal = document.querySelector('.modal');
 var triggers = document.querySelectorAll('.modal-active');
 var closeButton = document.querySelector('.close-button');
 
 function toggleModal() {
   modal.classList.toggle('show-modal');
+
+  console.log('toggleModal');
 
   if (window.innerWidth > 991) {
     document.body.classList.toggle('lock');
@@ -85,120 +88,31 @@ function windowOnClick(event) {
   }
 }
 
-// Додаємо обробники подій для відкриття та закриття модального вікна
 triggers.forEach(function (trigger) {
   trigger.addEventListener('click', toggleModal);
 });
 
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
+closeButton.addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('modalForm');
-  const closeButton = document.querySelector('.close-button');
+// Get the scroll button element
+var scrollButton = document.getElementById('scrollButton');
 
-  closeButton.addEventListener('click', closeModal);
-
-  let formSubmitted = false;
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    if (formSubmitted) return;
-
-    formSubmitted = true;
-
-    const submitButton = form.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-
-    const formData = new FormData(form);
-
-    fetch('/send_email_modal.php', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        document.body.classList.remove('lock');
-
-        const modal = document.querySelector('.modal');
-        if (modal.classList.contains('show-modal')) {
-          modal.classList.remove('show-modal');
-        }
-
-        alert('Ваш запит відправлено!');
-        closeModal(); // Закриваємо модальне вікно після відправки форми
-
-        formSubmitted = false;
-        submitButton.disabled = false;
-      })
-      .catch((error) => {
-        console.error('Помилка:', error);
-        alert('Сталася помилка при відправці форми.');
-        formSubmitted = false;
-        submitButton.disabled = false;
-      });
-  });
+// Show scroll button when scrolling 100vh
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= window.innerHeight) {
+    scrollButton.style.opacity = '1';
+  } else {
+    scrollButton.style.opacity = '0';
+  }
 });
 
-function closeModal() {
-  const modal = document.querySelector('.modal');
-  modal.classList.remove('show-modal'); // Приховуємо модальне вікно, знімаючи клас
-}
-
-// Функція для перевірки видимості блоку calculation
-function checkCalculationVisibility() {
-  const scrollButton = document.getElementById('scrollButton');
-  const calculationSection = document.querySelector('.calculation');
-  const rect = calculationSection.getBoundingClientRect();
-
-  // Перевірка, чи блок calculation повністю видимий на екрані
-  if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-    scrollButton.classList.remove('visible'); // Сховати кнопку
-  } else {
-    scrollButton.classList.add('visible'); // Показати кнопку
-  }
-}
-
-// Додати обробник події скролу
-window.onscroll = function () {
-  checkCalculationVisibility();
-};
-
-// Функція для скролу догори
+// Function to scroll to the top when the button is clicked
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth', // Плавний скролінг
+    behavior: 'smooth',
   });
 }
-
-// Отримати кнопку прокрутки
-var scrollButton = document.getElementById('scrollButton');
-
-document.addEventListener('DOMContentLoaded', function () {
-  AOS.init({
-    disable: function () {
-      var isMobile = window.innerWidth < 768;
-      console.log('AOS disabled:', isMobile);
-      return isMobile;
-    },
-    startEvent: 'DOMContentLoaded',
-    initClassName: 'aos-init',
-    animatedClassName: 'aos-animate',
-    useClassNames: false,
-    disableMutationObserver: false,
-    debounceDelay: 50,
-    throttleDelay: 99,
-    offset: 100,
-    delay: 0,
-    duration: 400,
-    easing: 'ease',
-    once: true,
-    mirror: false,
-    anchorPlacement: 'top-bottom',
-  });
-});
-
-// Викликати функцію при завантаженні сторінки
-checkCalculationVisibility();

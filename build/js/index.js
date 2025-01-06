@@ -65,57 +65,6 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// - modal
-var modal = document.querySelector('.modal');
-var triggers = document.querySelectorAll('.modal-active');
-var closeButton = document.querySelector('.close-button');
-
-function toggleModal() {
-  modal.classList.toggle('show-modal');
-
-  console.log('toggleModal');
-
-  if (window.innerWidth > 991) {
-    document.body.classList.toggle('lock');
-  } else if (!modal.classList.contains('show-modal')) {
-    document.body.classList.remove('lock');
-  }
-}
-
-function windowOnClick(event) {
-  if (event.target === modal) {
-    toggleModal();
-  }
-}
-
-triggers.forEach(function (trigger) {
-  trigger.addEventListener('click', toggleModal);
-});
-
-closeButton.addEventListener('click', toggleModal);
-window.addEventListener('click', windowOnClick);
-closeButton.addEventListener('click', toggleModal);
-window.addEventListener('click', windowOnClick);
-
-// Get the scroll button element
-var scrollButton = document.getElementById('scrollButton');
-
-// Show scroll button when scrolling 100vh
-window.addEventListener('scroll', function () {
-  if (window.scrollY >= window.innerHeight) {
-    scrollButton.style.opacity = '1';
-  } else {
-    scrollButton.style.opacity = '0';
-  }
-});
-
-// Function to scroll to the top when the button is clicked
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-}
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('modalForm');
   const closeButton = document.querySelector('.close-button');
@@ -168,3 +117,60 @@ function closeModal() {
   const modal = document.querySelector('.modal');
   modal.classList.remove('show-modal'); // Приховуємо модальне вікно, знімаючи клас
 }
+
+// Функція для перевірки видимості блоку calculation
+function checkCalculationVisibility() {
+  const scrollButton = document.getElementById('scrollButton');
+  const calculationSection = document.querySelector('.calculation');
+  const rect = calculationSection.getBoundingClientRect();
+
+  // Перевірка, чи блок calculation повністю видимий на екрані
+  if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+    scrollButton.classList.remove('visible'); // Сховати кнопку
+  } else {
+    scrollButton.classList.add('visible'); // Показати кнопку
+  }
+}
+
+// Додати обробник події скролу
+window.onscroll = function () {
+  checkCalculationVisibility();
+};
+
+// Функція для скролу догори
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Плавний скролінг
+  });
+}
+
+// Отримати кнопку прокрутки
+var scrollButton = document.getElementById('scrollButton');
+
+document.addEventListener('DOMContentLoaded', function () {
+  AOS.init({
+    disable: function () {
+      var isMobile = window.innerWidth < 768;
+      console.log('AOS disabled:', isMobile);
+      return isMobile;
+    },
+    startEvent: 'DOMContentLoaded',
+    initClassName: 'aos-init',
+    animatedClassName: 'aos-animate',
+    useClassNames: false,
+    disableMutationObserver: false,
+    debounceDelay: 50,
+    throttleDelay: 99,
+    offset: 100,
+    delay: 0,
+    duration: 400,
+    easing: 'ease',
+    once: true,
+    mirror: false,
+    anchorPlacement: 'top-bottom',
+  });
+});
+
+// Викликати функцію при завантаженні сторінки
+checkCalculationVisibility();

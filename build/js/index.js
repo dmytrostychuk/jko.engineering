@@ -65,6 +65,34 @@ window.addEventListener('scroll', function () {
   }
 });
 
+var modal = document.querySelector('.modal');
+var triggers = document.querySelectorAll('.modal-active');
+var closeButton = document.querySelector('.close-button');
+
+function toggleModal() {
+  modal.classList.toggle('show-modal');
+
+  if (window.innerWidth > 991) {
+    document.body.classList.toggle('lock');
+  } else if (!modal.classList.contains('show-modal')) {
+    document.body.classList.remove('lock');
+  }
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+
+// Додаємо обробники подій для відкриття та закриття модального вікна
+triggers.forEach(function (trigger) {
+  trigger.addEventListener('click', toggleModal);
+});
+
+closeButton.addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('modalForm');
   const closeButton = document.querySelector('.close-button');
